@@ -7,6 +7,13 @@ armor = ["Leather_Helmet","Leather_Boots","Leather_Breastplate"]
 weapons = ["Wooden_Sword","Wooden_Shield"]
 items = ["Health_Potion"]
 
+tutorial =Fore.MAGENTA + '''Let me explain how combat works since this is your first time
+You will take turns fighing each other by attacking or defending
+You win by making the enemies health points reach zero and vice versa lose if you health points hit zero
+observing who you are fighting and what actions they will take will be key to victory
+You start with 20 health btw and after every battle you will be told your remaining health
+Good luck in battle and cant wait to talk again soon~'''
+
 print(Fore.GREEN + "CHAPTER 0: THE BEGINNING")
 
 print()
@@ -102,13 +109,7 @@ if choice_1 == "Left" or choice_1 == "left":
     scorpion_health = 3
 
     print()
-
-    print(Fore.MAGENTA + "Let me explain how combat works since this is your first time")
-    print("You will take turns fighing each other by attacking or defending")
-    print("You win by making the enemies health points reach zero and vice versa lose if you health points hit zero")
-    print("observing who you are fighting and what actions they will take will be key to victory")
-    print("You atrt with 20 health btw and after battle every battle will be told you remaining health")
-    input("Good luck in battle and cant wait to talk again soon~")
+    print(tutorial)
 
     print(Fore.WHITE + "")
 
@@ -135,7 +136,7 @@ if choice_1 == "Left" or choice_1 == "left":
         hero_action = input("Would you like to attack or defend?: ")
 
         if hero_action == "Attack" or hero_action == "attack":
-            print("You slash the scorpion with your sword but its a shallow hit with it defending itself!")
+            print("You slash the scorpion with your sword as it attempts to parry only blocking half your strike!")
             scorpion_health -= 1
         elif hero_health == "Defend" or hero_action == "defend":
             print("You raise your shield to protect yourself against nothing!")
@@ -184,17 +185,17 @@ if choice_1 == "Left" or choice_1 == "left":
 
     print("Inside the box is a set of dark black metal armor!")
     print("You put on your new armor and tho much stronger then your old leather armor it is strangely lighter")
-    armor_2 =["Black_Metal_Helmet","Black_Metal_Boots","Black_Metal_Breatplate"]
-    print("That is a nice new set of armor your wearing!")
-    print(armor_2)
-    input("You throw your old set of leather armor in the fire on top the golem statues head but suddenly hear a booming voice.... ")
+    armor.clear()
+    armor.extend(["Black_Metal_Helmet","Black_Metal_Boots","Black_Metal_Breatplate"])
+    print(armor)
+    input("With your new armor on you throw your old set of leather armor into the fire on top the golem statues head but suddenly hear a booming voice.... ")
 
     print()
 
     print(Fore.CYAN + "WHO DARES DISTURBE MY SLUMBER")
     print(Fore.WHITE + "The golem statue tho not moving is speaking to you!")
     print(Fore.CYAN + "AHH I SEE WE HAVE A NEW HERO")
-    print("SOLVE MY RIDDLE AND I WILL GIVE YOU A PRIZE YOU ARE SURE TO LOVE")
+    print("SOLVE MY RIDDLE AND I WILL GIVE YOU A REWARD YOU ARE SURE TO LOVE")
     input("BUT FAIL AND YOU SHALL SUFFER THE CONSEQUENCES...")
 
     print()
@@ -215,17 +216,50 @@ if choice_1 == "Left" or choice_1 == "left":
         print("HERE IS YOUR REWARD I AM GOING BACK TO SLEEP")
         print(Fore.WHITE + "The golems mouth open and out comes a grenade!")
         print("Wait a grenade??? isnt that a weapon from yours world")
-        items.extend("Grenade")
+        items.append("Grenade")
         print("Before you can question why a weapon from your world is here you start to hear a rumble...")
     else:
         print()
         print(Fore.CYAN + "WRONG! NOW FACE MY WRATH")
-        print(Fore.WHITE + "The golems mouth opens and shoots a poison slime onto you")
+        print(Fore.WHITE + "The golems mouth opens and shoots a poison slime onto you!")
         hero_health -= 2
         print("The poison slime burns your skin")
         if hero_health <1:
-            input("You cant withstand the poison...")
+            input("You cant withstand the poison...you died")
             quit()
         print("But before you get the posion off yourself you start to hear a rumble...")
         
-        print()
+    print()
+
+    print("The floor below you opens up and you start to fall for what feels like an eternity")
+    print("You cant understand how you have been falling for so long when it didnt take you this long to climb the temple")
+    print("But at that moment you land onto a soft white fluffy floor")
+    input("You look around and can tell you no longer in the dessert but in a new unkown area...")
+    
+if choice_1 == "Right" or choice_1 == "right":
+    print()
+    print(Fore.WHITE + "You decide to take the right path")
+    print("You can handle the cold and im sure wolf hares are friendly!")
+    print("You start to walk forward as the dirt beneath your feet is slowly replaced by snow")
+    print("Thick white clouds and tall trees hide the suns in the sky making you wish you had somthing to help fight against this freezing weather")
+    print("Around you are small critters covered in thick white hair camouflaging with the pure white snow making it hard to identify them at all")
+    print("You can start to hear a lound thumping in the distance making all the small animals hide in the snow")
+    input("A giant grey figure jumps from behind a tree right in front of you catching you by suprise....")
+
+    print()
+
+    print("As you gain your composure standing in front of you is a giant grey wolf hare")
+    print("The creature has thick greay hair with giant rabbit legs giving it the ability to pounce great distances")
+    print("The rest of the body resembles that of a wolf except a round wide eyed rabbit face")
+    print("But as it growls you can see giant rows of razar sharp teeth inside its mouth")
+    input("The creature is not friendly at all and ready to to rip you to shredds...")
+
+    print()
+
+    print(Fore.RED + "PREPARE FOR BATTLE!!!")
+    wolf_health = 3
+
+    print()
+    print(tutorial)
+
+    print(Fore.WHITE + "")
