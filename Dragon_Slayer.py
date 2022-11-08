@@ -173,3 +173,59 @@ if choice_1 == "Left" or choice_1 == "left":
                 print("Type yes to use potion or no to not use potion")
     
     print()
+
+    print("With the scorpion slain you continue marching forward hoping thats the last monster you have to battle")
+    print("After what feels like hours you come across a tall rectangular shaped temple with stairs leading to the top")
+    print("You start climbing the stairs with every step making you feel like your getting closer to the suns in the sky")
+    print("Once you reach the top infront of you is a chest and golem statue with a flame on its head ")
+    input("You step towards the chest and using all your might lift the lid now able to get whatever is inside...")
+
+    print()
+
+    print("Inside the box is a set of dark black metal armor!")
+    print("You put on your new armor and tho much stronger then your old leather armor it is strangely lighter")
+    armor_2 =["Black_Metal_Helmet","Black_Metal_Boots","Black_Metal_Breatplate"]
+    print("That is a nice new set of armor your wearing!")
+    print(armor_2)
+    input("You throw your old set of leather armor in the fire on top the golem statues head but suddenly hear a booming voice.... ")
+
+    print()
+
+    print(Fore.CYAN + "WHO DARES DISTURBE MY SLUMBER")
+    print(Fore.WHITE + "The golem statue tho not moving is speaking to you!")
+    print(Fore.CYAN + "AHH I SEE WE HAVE A NEW HERO")
+    print("SOLVE MY RIDDLE AND I WILL GIVE YOU A PRIZE YOU ARE SURE TO LOVE")
+    input("BUT FAIL AND YOU SHALL SUFFER THE CONSEQUENCES...")
+
+    print()
+    hero_answ =""
+    guess_count = 0
+
+    print("I EAT, I LIVE, I BREATHE, I LIVE, I DRINK, I DIE")
+
+    while hero_answ not in ["fire",'Fire',"flame","Flame"]:
+        hero_answ = input("WHAT AM I???: ")
+        guess_count += 1
+        if guess_count > 2:
+            break
+
+    if guess_count <= 3:
+        print()
+        print("THAT IS CORRECT!")
+        print("HERE IS YOUR REWARD I AM GOING BACK TO SLEEP")
+        print(Fore.WHITE + "The golems mouth open and out comes a grenade!")
+        print("Wait a grenade??? isnt that a weapon from yours world")
+        items.extend("Grenade")
+        print("Before you can question why a weapon from your world is here you start to hear a rumble...")
+    else:
+        print()
+        print(Fore.CYAN + "WRONG! NOW FACE MY WRATH")
+        print(Fore.WHITE + "The golems mouth opens and shoots a poison slime onto you")
+        hero_health -= 2
+        print("The poison slime burns your skin")
+        if hero_health <1:
+            input("You cant withstand the poison...")
+            quit()
+        print("But before you get the posion off yourself you start to hear a rumble...")
+        
+        print()
