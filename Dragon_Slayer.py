@@ -73,6 +73,8 @@ while choice_1 not in ["left","Left","right","Right"]:
 hero_health = 20
 hero_action = ""
 heal_1 = ""
+hero_answ =""
+guess_count = 0
 
 if choice_1 == "Left" or choice_1 == "left":
     print()
@@ -150,6 +152,7 @@ if choice_1 == "Left" or choice_1 == "left":
             if heal_1 == "yes" or heal_1 == "Yes":
                 print("You drink the health potion healing you completely")
                 items.remove("Health_Potion")
+                hero_health = 20
             elif heal_1 == "no" or heal_1 == "No":
                 print("You save your potion for another battle")
             else:
@@ -176,26 +179,16 @@ if choice_1 == "Left" or choice_1 == "left":
     print("SOLVE MY RIDDLE AND I WILL GIVE YOU A REWARD YOU ARE SURE TO LOVE")
     input("BUT FAIL AND YOU SHALL SUFFER THE CONSEQUENCES..." + "\n")
 
-    hero_answ =""
-    guess_count = 0
-
     print("I EAT, I LIVE, I BREATHE, I LIVE, I DRINK, I DIE")
+    print(Fore.MAGENTA + "The answer is only 1 word btw~")
 
     while hero_answ not in ["fire",'Fire',"flame","Flame"]:
-        hero_answ = input("WHAT AM I???: ")
+        hero_answ = input(Fore.CYAN +"WHAT AM I???: ")
         guess_count += 1
         if guess_count > 2:
             break
 
-    if guess_count <= 3:
-        print()
-        print("THAT IS CORRECT!")
-        print("HERE IS YOUR REWARD I AM GOING BACK TO SLEEP")
-        print(Fore.WHITE + "The golems mouth open and out comes a grenade!")
-        print("Wait a grenade??? isnt that a weapon from yours world")
-        items.append("Grenade")
-        print("Before you can question why a weapon from your world is here you start to hear a rumble...")
-    else:
+    if guess_count > 2 and hero_answ not in ["fire",'Fire',"flame","Flame"]:
         print()
         print(Fore.CYAN + "WRONG! NOW FACE MY WRATH")
         print(Fore.WHITE + "The golems mouth opens and shoots a poison slime onto you!")
@@ -204,8 +197,16 @@ if choice_1 == "Left" or choice_1 == "left":
         if hero_health <1:
             input("You cant withstand the poison...you died")
             quit()
-        print("But before you get the posion off yourself you start to hear a rumble...")
-        
+        input("But before you get the posion off yourself you start to hear a rumble...")
+    else:
+        print()
+        print("THAT IS CORRECT!")
+        print("HERE IS YOUR REWARD I AM GOING BACK TO SLEEP")
+        print(Fore.WHITE + "The golems mouth open and out comes a grenade!")
+        print("Wait a grenade??? isnt that a weapon from your world?")
+        items.append("Grenade")
+        input("Before you can question why a weapon from your world is here you start to hear a rumble...")
+
     print()
 
     print("The floor below you opens up and you start to fall for what feels like an eternity")
@@ -291,6 +292,7 @@ if choice_1 == "Right" or choice_1 == "right":
             if heal_1 == "yes" or heal_1 == "Yes":
                 print("You drink the health potion healing you completely")
                 items.remove("Health_Potion")
+                hero_health = 20
             elif heal_1 == "no" or heal_1 == "No":
                 print("You save your potion for another battle")
             else:
@@ -299,3 +301,50 @@ if choice_1 == "Right" or choice_1 == "right":
     print()
 
     print("With the wolf hare defeated you continue marching forward hoping thats the last monster you have to battle")
+    print("You continue forward on the snowy path as it becomes colder and harder to see in front of you")
+    print("If you stop for even a moment you fear your body will freeze in place making you a man sized icicle")
+    input("After what feels like hours walking you start to hear a voice in the distance..." + "\n")
+
+    print(Fore.CYAN + "You are almost here just a little further!")
+    print(Fore.WHITE + "You walk forwards towards the sound of the voice")
+    print("After a few minutes the snow settles and standing infront of you is a giant snowman double your size")
+    print(Fore.CYAN +  "A HERO!!! It has been ages since I got to talk to one of those!")
+    print("Solve my riddle and I will give you a very special present!")
+    input("But fail and you just might freeze to death <3..." + "\n")
+
+    print("What kind of crystals dont break when they hit the ground?")
+    print(Fore.MAGENTA + "The answer is only 1 word btw~")
+
+    while hero_answ not in ["snow",'Snow',"ice","Ice"]:
+        hero_answ = input(Fore.CYAN + "WHAT AM I???: ")
+        guess_count += 1
+        if guess_count > 2:
+            break
+
+    if guess_count > 2 and hero_answ not in ["snow",'Snow',"ice","Ice"]:
+        print("Wrong answer! Time for a special present!")
+        print(Fore.WHITE + "An icicle shoots out from the snowmans body piercing your body")
+        hero_health -= 2
+        if hero_health <1:
+            input("You have already been badly wounded and this was the finale nail in the coffin...you died")
+            quit()
+        input("You pull the icicle out from your body and before you can say or think anything else a heavy gust of wind starts to blow...")
+    else:
+        print("Thats correct! Here is your reward!")
+        print(Fore.WHITE + "A small black object shoots out of the snowmans chest")
+        print("You pick it up and relize its a gun...wait a gun isnt that from your world?")
+        print("Upon closer inspection you can tell its a handgun with only a single bullet")
+        items.append("Pistol")
+        input("Before you can ask how the snowman got this a heavy gust of wind starts to blow...")
+    
+    print()
+
+    print("The wind intensifies to the point where you are lifted into the air")
+    print(Fore.CYAN + "Bye bye hero and goodluck on your journey!")
+    print(Fore.WHITE + "The cold wind blast you into the sky so fast and so high you arent sure where you are or where you are going")
+    print("After a few minutes the gust subsides and you land on to a soft white fluffy floor")
+    input("You look around and can tell you no longer in the snowy forest but in a new unkown area...")
+
+print()
+
+print(Fore.GREEN + "CHAPTER 2: " + "\n")
