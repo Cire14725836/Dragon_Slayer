@@ -101,6 +101,7 @@ if choice_1 == "Left" or choice_1 == "left":
     while hero_health > 0:
         print("The scorpion readies his claws to attack!")
         hero_action = input("Would you like to attack or defend?: ")
+        hero_action = hero_action.replace(" ","")
 
         if hero_action == "Attack" or hero_action == "attack":
             print("You slash the scorpion with your sword as it slashes you with its claws!")
@@ -119,6 +120,7 @@ if choice_1 == "Left" or choice_1 == "left":
 
         print("The scorpion pulls its claws back to cover itself!")
         hero_action = input("Would you like to attack or defend?: ")
+        hero_action = hero_action.replace(" ","")
 
         if hero_action == "Attack" or hero_action == "attack":
             print("You slash the scorpion with your sword as it attempts to parry only blocking half your strike!")
@@ -148,6 +150,7 @@ if choice_1 == "Left" or choice_1 == "left":
     else:
         while heal_1 not in ["yes","Yes","no","No"]:
             heal_1 = input("You currently have a health potion would you like to use it? yes/no: ")
+            heal_1 = heal_1.replace(" ","")
         
             if heal_1 == "yes" or heal_1 == "Yes":
                 print("You drink the health potion healing you completely")
@@ -184,6 +187,7 @@ if choice_1 == "Left" or choice_1 == "left":
 
     while hero_answ not in ["fire",'Fire',"flame","Flame"]:
         hero_answ = input(Fore.CYAN +"WHAT AM I???: ")
+        hero_answ = hero_answ.replace(" ","")
         guess_count += 1
         if guess_count > 2:
             break
@@ -241,6 +245,7 @@ if choice_1 == "Right" or choice_1 == "right":
     while hero_health > 0:
         print("The wolf hare bears its teeth ready to pounce!")
         hero_action = input("Would you like to attack or defend?: ")
+        hero_action = hero_action.replace(" ","")
 
         if hero_action == "Attack" or hero_action == "attack":
             print("You stab the wolf hare with your sword as it bites into you!")
@@ -259,6 +264,7 @@ if choice_1 == "Right" or choice_1 == "right":
 
         print("The wolf hare stomps its feet in frustration")
         hero_action = input("Would you like to attack or defend?: ")
+        hero_action = hero_action.replace(" ","")
 
         if hero_action == "Attack" or hero_action == "attack":
             print("You slash at the wolf hare as it bounces to the side to dodge giving it a minor wound")
@@ -288,6 +294,7 @@ if choice_1 == "Right" or choice_1 == "right":
     else:
         while heal_1 not in ["yes","Yes","no","No"]:
             heal_1 = input("You currently have a health potion would you like to use it? yes/no: ")
+            heal_1 = heal_1.replace(" ","")
         
             if heal_1 == "yes" or heal_1 == "Yes":
                 print("You drink the health potion healing you completely")
@@ -301,9 +308,18 @@ if choice_1 == "Right" or choice_1 == "right":
     print()
 
     print("With the wolf hare defeated you continue marching forward hoping thats the last monster you have to battle")
-    print("You continue forward on the snowy path as it becomes colder and harder to see in front of you")
+    print("As you continue forward on the snowy path it becomes colder and harder to see in front of you")
     print("If you stop for even a moment you fear your body will freeze in place making you a man sized icicle")
-    input("After what feels like hours walking you start to hear a voice in the distance..." + "\n")
+    print("After a few more minutes of walking you almost trip over somthing sticking out of the snow")
+    input("You dig around the snow and notice its a set of armor with some old human looking bones next to it..." + "\n")
+
+    print("Well whoever owned this armor before doesnt need it anymore")
+    print("You inspect the armor and see its made of pure white metal and tho stronger then your leather armor it is much lighter")
+    print("You toss your old armor to the side and equip your new armor")
+    armor.clear()
+    armor.extend(["White_Metal_Helmet","White_Metal_Boots","White_Metal_Breatplate"])
+    print(armor)
+    input("With your new armor on you get ready to continue your journy but then start to hear a voice in the distance..." + "\n")
 
     print(Fore.CYAN + "You are almost here just a little further!")
     print(Fore.WHITE + "You walk forwards towards the sound of the voice")
@@ -317,6 +333,7 @@ if choice_1 == "Right" or choice_1 == "right":
 
     while hero_answ not in ["snow",'Snow',"ice","Ice"]:
         hero_answ = input(Fore.CYAN + "WHAT AM I???: ")
+        hero_answ = hero_answ.replace(" ","")
         guess_count += 1
         if guess_count > 2:
             break
@@ -340,7 +357,7 @@ if choice_1 == "Right" or choice_1 == "right":
     print()
 
     print("The wind intensifies to the point where you are lifted into the air")
-    print(Fore.CYAN + "Bye bye hero and goodluck on your journey!")
+    print(Fore.CYAN + "Bye bye Hero and goodluck on your journey!")
     print(Fore.WHITE + "The cold wind blast you into the sky so fast and so high you arent sure where you are or where you are going")
     print("After a few minutes the gust subsides and you land on to a soft white fluffy floor")
     input("You look around and can tell you no longer in the snowy forest but in a new unkown area...")
