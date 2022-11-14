@@ -360,8 +360,83 @@ if choice_1 == "Right" or choice_1 == "right":
     print(Fore.CYAN + "Bye bye Hero and goodluck on your journey!")
     print(Fore.WHITE + "The cold wind blast you into the sky so fast and so high you arent sure where you are or where you are going")
     print("After a few minutes the gust subsides and you land on to a soft white fluffy floor")
-    input("You look around and can tell you no longer in the snowy forest but in a new unkown area...")
+    input("You look around and can tell you are no longer in the snowy forest but in a new unkown area...")
 
 print()
 
-print(Fore.GREEN + "CHAPTER 2: " + "\n")
+print(Fore.GREEN + "CHAPTER 2: THE CLOUDY CAVERN" + "\n")
+reward = 0
+
+print(Fore.WHITE + "You stand up and relize that the ground has been replaced by clouds")
+print("Not just the ground but everything around you is made of differnt size and shaped clouds")
+print("You look up into the sky and still see the familiar 2 suns now joined by black birds with 2 sets of wings")
+print("being surrounded by cloud like trees, bushes , and even rocks the only thing you can do is move forwards")
+input("But before you move forward you start to hear a fimilar voice..." + "\n")
+
+print(Fore.BLUE + "Hero I am very proud of you for making it this far!")
+print("I see you also got yourself a nice new set of armor that will help defend you against the evil dragon")
+print("Continue on your journey and make your way to Fire Mountain that is where the evil dragon lives")
+print("I am counting on you Hero you must fulfill your duty if you want me to send you back to your world!")
+input("Good luck Hero..." + "\n")
+
+print(Fore.WHITE + "Good to know whoever forced you into this situation is still watching")
+print("But with that unneeded commentary you start marching forward")
+print("As your walking the path is full of many inclines and declines and you are able to see many cloud mountains in the distance")
+print("After about and hour or so the path starts to lead into a cloud cavern in a mountain")
+input("As soon as you step into the cavern you are greeted by a very stranger being...." + "\n")
+
+print("A giant black arm is perched on the side of a nearby rock")
+print("The arm lifts up seemingly unable to move from its position")
+print("The palm of its hand opens up revealing a giant green eye right in the center")
+input("The hand is staring right at you and even tho it has no mouth it starts to speak to you..." + "\n")
+
+print(Fore.LIGHTYELLOW_EX + "Hello Hero I have been waiting for you")
+print("Continue through this cavern and you will make it to the Fire Mountain")
+print("But if you go the way you are now you will surely die")
+print("So you shall play against me in 3 separate games and for each game you win I will give you somthing to aid you on your journey")
+input("For the first game we will play a game called sword or shield...." + "\n")
+
+print(Fore.WHITE + "The hand reaches over behind a rock picking up a coin with a sword on 1 side and a shield on the other")
+print(Fore.LIGHTYELLOW_EX + "The game is simple ill flick this coin into the air and while its in the air you call sword or shield")
+print("If it lands on the side you called you win! If not you lose")
+coin = input("So what will it be sword or shield?: ")
+
+while coin not in ["sword","Sword","shield","Shield"]:
+    coin = input("So what will it be sword or shield?: ")
+    coin = coin.replace(" ","")
+
+if coin == "Sword" or coin == "sword":
+    print(Fore.WHITE + "You called sword and it landed on sword!")
+else:
+    print(Fore.WHITE + "You called shield and it landed on shield!")
+print(Fore.LIGHTYELLOW_EX + "You won hero good job I knew you could do it")
+input("Thats 1 out of 3 now on to the next game...." + "\n")
+
+print("The next game is very similar ill roll a dice and you need to say if it will be odd or even")
+print(Fore.WHITE + "The hand reaches over behind the rock again this time pulling out a 6 sided dice")
+print(Fore.LIGHTYELLOW_EX + "You have a 50/50 chance lets see if your luck wont run out")
+dice_answ = input("So what will it be odd or even: ")
+dice_answ = dice_answ.replace(" ","")
+
+dice = random.randint(1,6)
+
+while dice_answ not in ["odd","Odd","even","Even"]:
+    dice_answ = input("So what will it be odd or even: ")
+    dice_answ = dice_answ.replace(" ","")
+
+input("So you think it will be " + dice_answ + " lets see if your right..." + "\n")
+
+print(Fore.WHITE + f"The hand rolls the dice and it lands on {dice}")
+if dice in [1,3,5]:
+    dice = "odd"
+else:
+    dice = "even"
+
+if dice_answ in ["odd","Odd"] and dice == "odd":
+    print("You won again!")
+    reward += 1
+elif dice_answ in ["even","Even"] and dice == "even":
+    print("You won again!")
+    reward += 1
+else:
+    print("You lost...")
