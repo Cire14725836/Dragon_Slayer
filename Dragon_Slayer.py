@@ -232,7 +232,7 @@ if choice_1 == "Right" or choice_1 == "right":
     print("The creature has thick greay hair with giant rabbit legs giving it the ability to pounce great distances")
     print("The rest of the body resembles that of a wolf except a round wide eyed rabbit face")
     print("But as it growls you can see giant rows of razar sharp teeth inside its mouth")
-    input("The creature is not friendly at all and ready to to rip you to shredds..." + "\n")
+    input("The creature is not friendly at all and ready to to rip you to shreds..." + "\n")
 
     print(Fore.RED + "PREPARE FOR BATTLE!!!")
     wolf_health = 3
@@ -366,6 +366,7 @@ print()
 
 print(Fore.GREEN + "CHAPTER 2: THE CLOUDY CAVERN" + "\n")
 reward = 0
+lie = ()
 
 print(Fore.WHITE + "You stand up and relize that the ground has been replaced by clouds")
 print("Not just the ground but everything around you is made of differnt size and shaped clouds")
@@ -409,12 +410,12 @@ if coin == "Sword" or coin == "sword":
     print(Fore.WHITE + "You called sword and it landed on sword!")
 else:
     print(Fore.WHITE + "You called shield and it landed on shield!")
-print(Fore.LIGHTYELLOW_EX + "You won hero good job I knew you could do it")
+print(Fore.LIGHTYELLOW_EX + "You won Hero good job I knew you could do it")
 input("Thats 1 out of 3 now on to the next game...." + "\n")
 
 print("The next game is very similar ill roll a dice and you need to say if it will be odd or even")
 print(Fore.WHITE + "The hand reaches over behind the rock again this time pulling out a 6 sided dice")
-print(Fore.LIGHTYELLOW_EX + "You have a 50/50 chance lets see if your luck wont run out")
+print(Fore.LIGHTYELLOW_EX + "You have a 50/50 chance let's see if your luck will not run out")
 dice_answ = input("So what will it be odd or even: ")
 dice_answ = dice_answ.replace(" ","")
 
@@ -424,7 +425,7 @@ while dice_answ not in ["odd","Odd","even","Even"]:
     dice_answ = input("So what will it be odd or even: ")
     dice_answ = dice_answ.replace(" ","")
 
-input("So you think it will be " + dice_answ + " lets see if your right..." + "\n")
+input("So you think it will be " + dice_answ + " let's see if your right..." + "\n")
 
 print(Fore.WHITE + f"The hand rolls the dice and it lands on {dice}")
 if dice in [1,3,5]:
@@ -440,3 +441,29 @@ elif dice_answ in ["even","Even"] and dice == "even":
     reward += 1
 else:
     print("You lost...")
+
+print(Fore.LIGHTYELLOW_EX + "Ok Hero only 1 game left!")
+input("This game will be a bit different from the rest because you just need to answer 1 question...." + "\n")
+
+while lie not in ["Yes","yes","No","no"]:
+    lie = input("Has anyone lied to you since you started your journey?: ")
+    lie = lie.replace(" ","")
+
+print("I see so that is what you truly belive?")
+print("I hope you thought long and hard about your answer because going forward everything will only get harder")
+input("But enought of that lets get to your rewards..." + "\n")
+
+print("For winning the coin game sword or shield I will be giving you a new sword AND shield")
+print("Honestly against any creature you face going forward your wooden sword and shield would do nothing")
+print(Fore.WHITE + "The giant hand grabs your sword and shield and crushes it to little woodden pieces")
+print("The hand makes a fist and slams the ground shaking the entire cloudy cave")
+input("From the cave ceiling drops a peculiar set of sword and shield...." + "\n")
+
+print("At first glance looking at the sword and shield they look simple and made of what looks like steel")
+print("But stare long enough and inside the metal it almost looks like a stream of metalic liquid flows inside")
+print("But with your old sword and shield destroyed you really dont have a choice but to equipt these strange new ones")
+weapons.clear()
+weapons.extend(["Living_Metal_Sword","Living_Metal_Shield"])
+print(weapons)
+input(Fore.LIGHTYELLOW_EX + "Now you look like a true Hero ready to save our world...")
+
