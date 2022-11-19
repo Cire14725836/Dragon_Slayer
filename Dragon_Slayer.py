@@ -2,6 +2,7 @@ from colorama import init, Fore, Back, Style
 init()
 
 import random
+import pyfiglet
 
 armor = ["Leather_Helmet","Leather_Boots","Leather_Breastplate"]
 weapons = ["Wooden_Sword","Wooden_Shield"]
@@ -14,7 +15,7 @@ observing who you are fighting and what actions they will take will be key to vi
 You start with 20 health btw and after every battle you will be told your remaining health
 Good luck in battle and cant wait to talk again soon~'''
 
-print(Fore.BLACK + Back.WHITE + "DRAGON_SLAYER" + "\n")
+print(Fore.RED + pyfiglet.figlet_format ("DRAGON SLAYER") + "\n")
 
 print(Fore.GREEN + Back.BLACK + "CHAPTER 0: THE BEGINNING" + "\n")
 
@@ -90,10 +91,9 @@ if choice_1 == "Left" or choice_1 == "left":
     print("About half the size of you and instead of having 2 pincers like a scorpion from your world has it has claws with sharp long nails made for digging and slashing")
     input("It hisses at you and scurries towards you...." + "\n")
 
-    print(Fore.RED + "PREPARE FOR BATTLE!!!")
+    print(Fore.RED + "PREPARE FOR BATTLE!!!" + "\n")
     scorpion_health = 3
 
-    print()
     print(tutorial)
 
     print(Fore.WHITE + "")
@@ -234,10 +234,9 @@ if choice_1 == "Right" or choice_1 == "right":
     print("But as it growls you can see giant rows of razar sharp teeth inside its mouth")
     input("The creature is not friendly at all and ready to to rip you to shreds..." + "\n")
 
-    print(Fore.RED + "PREPARE FOR BATTLE!!!")
+    print(Fore.RED + "PREPARE FOR BATTLE!!!" + "\n")
     wolf_health = 3
 
-    print()
     print(tutorial)
 
     print(Fore.WHITE + "")
@@ -360,9 +359,7 @@ if choice_1 == "Right" or choice_1 == "right":
     print(Fore.CYAN + "Bye bye Hero and goodluck on your journey!")
     print(Fore.WHITE + "The cold wind blast you into the sky so fast and so high you arent sure where you are or where you are going")
     print("After a few minutes the gust subsides and you land on to a soft white fluffy floor")
-    input("You look around and can tell you are no longer in the snowy forest but in a new unkown area...")
-
-print()
+    input("You look around and can tell you are no longer in the snowy forest but in a new unkown area..." + "\n")
 
 print(Fore.GREEN + "CHAPTER 2: THE CLOUDY CAVERN" + "\n")
 reward = 0
@@ -392,7 +389,7 @@ print("The palm of its hand opens up revealing a giant green eye right in the ce
 input("The hand is staring right at you and even tho it has no mouth it starts to speak to you..." + "\n")
 
 print(Fore.LIGHTYELLOW_EX + "Hello Hero I have been waiting for you")
-print("Continue through this cavern and you will make it to the Fire Mountain")
+print("Continue through this cavern and you will make it to Fire Mountain")
 print("But if you go the way you are now you will surely die")
 print("So you shall play against me in 3 separate games and for each game you win I will give you somthing to aid you on your journey")
 input("For the first game we will play a game called sword or shield...." + "\n")
@@ -446,7 +443,7 @@ print(Fore.LIGHTYELLOW_EX + "Ok Hero only 1 game left!")
 input("This game will be a bit different from the rest because you just need to answer 1 question...." + "\n")
 
 while lie not in ["Yes","yes","No","no"]:
-    lie = input("Has anyone lied to you since you started your journey?: ")
+    lie = input("Has anyone lied to you since you started your journey? yes/no: ")
     lie = lie.replace(" ","")
 
 print("I see so that is what you truly belive?")
@@ -461,9 +458,19 @@ input("From the cave ceiling drops a peculiar set of sword and shield...." + "\n
 
 print("At first glance looking at the sword and shield they look simple and made of what looks like steel")
 print("But stare long enough and inside the metal it almost looks like a stream of metalic liquid flows inside")
-print("But with your old sword and shield destroyed you really dont have a choice but to equipt these strange new ones")
+print("But with your old sword and shield destroyed you really dont have a choice but to equipped these strange new ones")
 weapons.clear()
 weapons.extend(["Living_Metal_Sword","Living_Metal_Shield"])
 print(weapons)
-input(Fore.LIGHTYELLOW_EX + "Now you look like a true Hero ready to save our world...")
+input(Fore.LIGHTYELLOW_EX + "Now you look like a true Hero ready to save our world..." + "\n")
+
+if reward == 1:
+    print("For winning the odd or even game I shall give you a strategic reward")
+    print("Further in this cavern you will most likely run into a bear beetle")
+    print("You will have to defeat it to make it out of this cave and continue forward towards Fire Mountain")
+    print("If the bear bettle charges you DODGE! If it swipes at you BLOCK!")
+    input("Doing anything else will results in you getting hurt even with your armor..." + "\n")
+else:
+    print("You lost the odd or even game")
+    input("So unfortunately I will not be giving you a reward for this game..." + "\n")
 
