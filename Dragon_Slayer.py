@@ -474,3 +474,33 @@ else:
     print("You lost the odd or even game")
     input("So unfortunately I will not be giving you a reward for this game..." + "\n")
 
+print("And for your finale reward I will give you advice depending on how you answered the finale question")
+if lie in ["Yes","yes"]:
+    print("So you think someone has lied to you throughout your journey")
+    print("I am not sure if that is true or false but what I can tell you is blindly trusting anyone is a bad idea")
+    print("In your battle against the fire dragon the best option may not be the most obvious")
+    input("That is all I can say Hero good luck and I hope one day we can talk again..." + "\n")
+else:
+    print("So you think no one has lied to you throughout your journey")
+    print("I am not sure if that is true or false but what I can tell you is everyone you have met is not working together")
+    print("Either way this will not change your fate in that you must face the fire dragon in battle")
+    input("Unfortunately that is all I can say but I wish you the best of luck Hero..." + "\n")
+
+print(Fore.WHITE + "With those finale words the giant hand slumps over and closes its eye")
+print("With new knowledge and equipment you march deeper into the cave")
+print("While walking you think of all the strange creatures you have seen and conversations you have had since waking up in this new world")
+print("But the one thing that sticks out the most is that everyone knows you as the Hero")
+input("A question you hope to find the answer to but while pondering you are stopped by a big black boulder inside this pure white cavern..." + "\n")
+
+print("You find this black boulder strange since everything in this cave is a shade of white")
+print("You find it even stranger when this black boulder starts to stand up and reveal its not a boulder but a bear beetle!")
+print("With the body of a bear almost twice your size instead of fur it has black beetle armor covering its body")
+print("With rows of giant sharp bear teeth and massive claws it also has a sharp prong beetle horn atop its head")
+input("The beetle bear roars and stomps towards you....""\n")
+
+print(Fore.RED + "PREPARE FOR BATTLE!!!" + "\n")
+
+print(Fore.MAGENTA + "Hello Hero! Have you missed me?")
+print("In this battle instead of just attacking and defending you also have the ability to dodge")
+print("Reading your opponents movments and responding correctly will be your key to victory!")
+input("I do hope you survive Hero so we may meet again <3..." + "\n")
