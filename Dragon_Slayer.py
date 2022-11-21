@@ -364,6 +364,7 @@ if choice_1 == "Right" or choice_1 == "right":
 print(Fore.GREEN + "CHAPTER 2: THE CLOUDY CAVERN" + "\n")
 reward = 0
 lie = ()
+bear = 7
 
 print(Fore.WHITE + "You stand up and relize that the ground has been replaced by clouds")
 print("Not just the ground but everything around you is made of differnt size and shaped clouds")
@@ -468,7 +469,7 @@ if reward == 1:
     print("For winning the odd or even game I shall give you a strategic reward")
     print("Further in this cavern you will most likely run into a bear beetle")
     print("You will have to defeat it to make it out of this cave and continue forward towards Fire Mountain")
-    print("If the bear bettle charges you DODGE! If it swipes at you BLOCK!")
+    print("If the bear bettle charges you DODGE! If it tries to slash at you BLOCK!")
     input("Doing anything else will results in you getting hurt even with your armor..." + "\n")
 else:
     print("You lost the odd or even game")
@@ -504,3 +505,70 @@ print(Fore.MAGENTA + "Hello Hero! Have you missed me?")
 print("In this battle instead of just attacking and defending you also have the ability to dodge")
 print("Reading your opponents movments and responding correctly will be your key to victory!")
 input("I do hope you survive Hero so we may meet again <3..." + "\n")
+
+if "Grenade" in items:
+    print(Fore.WHITE + "Now is a good time to put that grenade to use!")
+    print("You throw the grenade at the bear beetle and as it explodes it gives the bear beetle multiple minor cuts from the shrapnel" + "\n")
+    bear -= 2
+elif "Pistol" in items:
+    print(Fore.WHITE + "Now is a good time to put that pistol to use!")
+    print("You aim right at the bear beetles chest firing you single shot")
+    print("The bullet barely penetrates the bear beetle but does decent damage to it" + "\n")
+    bear -= 2
+
+while bear > 0:
+    ranum = random.randint(0,2)
+
+    if ranum == 1:
+        print(Fore.WHITE + "The beetle bear prepares to charge at you!")
+    elif ranum == 2:
+        print(Fore.WHITE + "The beetle bear lifts its arms to slash you!")
+    else:
+        print(Fore.WHITE + "The beetle bear rours to intimidate you")
+    
+    hero_action = input("Will you attack, defend, or dodge?: ")
+    hero_action = hero_action.replace(" ","")
+
+    if ranum == 1 and hero_action in ["Attack","attack"]:
+        print("You slash at the beetle bear while its charges into you! You hurt the beetle bear but took terrible damage")
+        bear -= 2
+        hero_health -= 4
+    elif ranum == 1 and hero_action in ["Defend","defend"]:
+        print("You block the beetle bears charge with your shield but still take minor damage from the impact!")
+        hero_health -= 2
+    elif ranum == 1 and hero_action in ["Dodge","dodge"]:
+        print("You successfully dodge the beetle bear charge making it slam into the cavern wall")
+        bear -= 1
+    elif ranum == 1:
+        print("You do nothing as the beetle bear charges into you making you take terrible damage!")
+        hero_health -= 4
+    
+    if ranum == 2 and hero_action in ["Attack","attack"]:
+        print("You slash the beetle bear as it slashes at you as well! You both take heavy damage")
+        bear -= 2
+        hero_health -= 4
+    elif ranum == 2 and hero_action in ["Defend","defend"]:
+        print("You bash the beetle bear to the ground with your shield stopping its attack!")
+        bear -= 1
+    elif ranum == 1 and hero_action in ["Dodge","dodge"]:
+        print("You try to dodge out of the way but the beetle bear still manages to graze you!")
+        hero_health -= 2
+    elif ranum == 2:
+        print("You do nothing as the beetle bear slashes you with both its claws making you take terrible damage!")
+        hero_health -= 4
+    
+    if ranum == 0 and hero_action in ["Attack","attack"]:
+        print("The beetle bears rour did not intimidate you so you slash it with all your might dealing solid damage")
+        bear -= 2
+    elif ranum == 0:
+        print("You where intimidated by the beetle bear and didn't take your opportunity to attack")
+    
+    print()
+    if hero_health < 1:
+        break
+
+if hero_health < 1:
+    print("You have taken to much damage from the beetle bear")
+    input("As you slowly lose your life you can almost hear a voice...almost")
+    quit()
+
