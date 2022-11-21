@@ -365,6 +365,7 @@ print(Fore.GREEN + "CHAPTER 2: THE CLOUDY CAVERN" + "\n")
 reward = 0
 lie = ()
 bear = 7
+heal_2 = ()
 
 print(Fore.WHITE + "You stand up and relize that the ground has been replaced by clouds")
 print("Not just the ground but everything around you is made of differnt size and shaped clouds")
@@ -561,7 +562,7 @@ while bear > 0:
         print("The beetle bears rour did not intimidate you so you slash it with all your might dealing solid damage")
         bear -= 2
     elif ranum == 0:
-        print("You where intimidated by the beetle bear and didn't take your opportunity to attack")
+        print("You where intimidated by the bear beetle and didn't take your opportunity to attack")
     
     print()
     if hero_health < 1:
@@ -572,3 +573,31 @@ if hero_health < 1:
     input("As you slowly lose your life you can almost hear a voice...almost")
     quit()
 
+print("With the beetle bear is on its finale leg you stab him deep in the chest putting an end to his life")
+print(f"Your current health is {hero_health}")
+
+if hero_health == 20:
+        print("You didnt get hurt at all from that battle")
+        input("GOOD JOB!...")
+elif hero_health < 20 and "Health_Potion" in items:
+    while heal_2 not in ["yes","Yes","no","No"]:
+            heal_2 = input("You currently have a health potion would you like to use it? yes/no: ")
+            heal_2 = heal_2.replace(" ","")
+        
+            if heal_2 == "yes" or heal_2 == "Yes":
+                print("You drink the health potion healing you completely")
+                items.remove("Health_Potion")
+                hero_health = 20
+            elif heal_2 == "no" or heal_2 == "No":
+                print("You save your potion for another battle")
+            else:
+                print("Type yes to use potion or no to not use potion")
+print()
+
+print("With the bear beetle defeated you venture further into the cavern continuing your journey")
+print("After walking for about half an hour you finally see an exit out of this cave")
+print("As soon as you are outside again you are greated by a giant black mountain with lava drippng from the sides")
+print("The sky is black and filled with enough smoke to cover the 2 suns in the sky")
+input("With only a single road leading to the top of Fire Mountain you feel your journey is coming to a climax soon..." + "\n")
+
+print(Fore.GREEN + "CHAPTER 3: THE DRAGON" + "\n")
