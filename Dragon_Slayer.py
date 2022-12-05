@@ -10,10 +10,11 @@ items = ["Health_Potion"]
 
 tutorial =Fore.MAGENTA + '''Let me explain how combat works since this is your first time
 You will take turns fighing each other by attacking or defending
+All actions or responses you take will never be more then 1 word
 You win by making the enemies health points reach zero and vice versa lose if you health points hit zero
 observing who you are fighting and what actions they will take will be key to victory
 You start with 20 health btw and after every battle you will be told your remaining health
-Good luck in battle and cant wait to talk again soon~'''
+Good luck in battle and I cant wait to talk to you again soon~'''
 
 print(Fore.RED + pyfiglet.figlet_format ("DRAGON SLAYER") + "\n")
 
@@ -39,7 +40,7 @@ print(items)
 print()
 
 print("Hopefully you find some better equipment before you have to fight an evil dragon")
-print("But with little choice but to move forward and slay the evil dragon to return yourself to your world you take your first step forward")
+print("But after being summoned to this strange world you have little choice but to move forward")
 input("Not knowing the difficulties you are about to face..." + "\n")
 
 print(Fore.GREEN + "CHAPTER 1: A FORK IN THE ROAD" + "\n")
@@ -58,7 +59,7 @@ input("Now who doesnt love poisonous animals? Hopefully the right path will be a
 
 print("You look down the right path and to your suprise see almost the exact opposite as the left path")
 print("The trees become taller and you see what looks like snow falling from the leaves onto the dirt path")
-print("You feel a frosty gust of wind blow from the right path and notice yet another sign pointing in that diresction")
+print("You feel a frosty gust of wind blow from the right path and notice yet another sign pointing in that direction")
 print("The sign reads: CAUTION EXTREME COLD AND WILD WOLF HARES")
 input("Wolf Hares...like a wolf/rabbit hybrid? sounds adorable..." + "\n")
 
@@ -183,7 +184,6 @@ if choice_1 == "Left" or choice_1 == "left":
     input("BUT FAIL AND YOU SHALL SUFFER THE CONSEQUENCES..." + "\n")
 
     print("I EAT, I LIVE, I BREATHE, I LIVE, I DRINK, I DIE")
-    print(Fore.MAGENTA + "The answer is only 1 word btw~")
 
     while hero_answ not in ["fire",'Fire',"flame","Flame"]:
         hero_answ = input(Fore.CYAN +"WHAT AM I???: ")
@@ -224,7 +224,7 @@ if choice_1 == "Right" or choice_1 == "right":
     print("You can handle the cold and im sure wolf hares are friendly!")
     print("You start to walk forward as the dirt beneath your feet is slowly replaced by snow")
     print("Thick white clouds and tall trees hide the suns in the sky making you wish you had somthing to help fight against this freezing weather")
-    print("Around you are small critters covered in thick white hair camouflaging with the pure white snow making it hard to identify them at all")
+    print("Around you are small critters covered in thick white hair camouflaging with the pure white snow making it hard to see them at all")
     print("You can start to hear a lound thumping in the distance making all the small animals hide in the snow")
     input("A giant grey figure jumps from behind a tree right in front of you catching you by suprise...." + "\n")
 
@@ -313,7 +313,7 @@ if choice_1 == "Right" or choice_1 == "right":
     input("You dig around the snow and notice its a set of armor with some old human looking bones next to it..." + "\n")
 
     print("Well whoever owned this armor before doesnt need it anymore")
-    print("You inspect the armor and see its made of pure white metal and tho stronger then your leather armor it is much lighter")
+    print("You inspect the armor and see its made of pure white metal and tho stronger than your leather armor it is much lighter")
     print("You toss your old armor to the side and equip your new armor")
     armor.clear()
     armor.extend(["White_Metal_Helmet","White_Metal_Boots","White_Metal_Breatplate"])
@@ -328,7 +328,6 @@ if choice_1 == "Right" or choice_1 == "right":
     input("But fail and you just might freeze to death <3..." + "\n")
 
     print("What kind of crystals dont break when they hit the ground?")
-    print(Fore.MAGENTA + "The answer is only 1 word btw~")
 
     while hero_answ not in ["snow",'Snow',"ice","Ice"]:
         hero_answ = input(Fore.CYAN + "WHAT AM I???: ")
@@ -513,7 +512,7 @@ if "Grenade" in items:
     bear -= 2
 elif "Pistol" in items:
     print(Fore.WHITE + "Now is a good time to put that pistol to use!")
-    print("You aim right at the bear beetles chest firing you single shot")
+    print("You aim right at the bear beetles chest firing a single shot")
     print("The bullet barely penetrates the bear beetle but does decent damage to it" + "\n")
     bear -= 2
 
@@ -573,7 +572,7 @@ if hero_health < 1:
     input("As you slowly lose your life you can almost hear a voice...almost")
     quit()
 
-print("With the beetle bear is on its finale leg you stab him deep in the chest putting an end to his life")
+print("With the bear beetle on its last leg you stab him deep in the chest putting an end to his life")
 print(f"Your current health is {hero_health}")
 
 if hero_health == 20:
@@ -598,6 +597,43 @@ print("With the bear beetle defeated you venture further into the cavern continu
 print("After walking for about half an hour you finally see an exit out of this cave")
 print("As soon as you are outside again you are greated by a giant black mountain with lava drippng from the sides")
 print("The sky is black and filled with enough smoke to cover the 2 suns in the sky")
-input("With only a single road leading to the top of Fire Mountain you feel your journey is coming to a climax soon..." + "\n")
+input("With only a single road leading to the top of Fire Mountain you feel your journey is coming to an end..." + "\n")
 
 print(Fore.GREEN + "CHAPTER 3: THE DRAGON" + "\n")
+
+print(Fore.WHITE + "You start walking up the steep path towards the top of Fire Mountain")
+print("After everything you have been through you are exhausted and now have to fight a dragon")
+print("You think of all the creatures and beings you have talked to and can't make heads or tails of it all")
+print("How did they all know who you where and why was I asked if I was lied to before")
+input("But before you even finish that thought you start to hear that familiar voice..." + "\n")
+
+print(Fore.BLUE + "Hero I am glad you made it to Fire Mountain!")
+print("Once you reach the top you must kill the evil dragon")
+print("If you do not I will make sure you are trapped in this world forever!")
+input("Fulfill your destiny Hero it's your only choice..." + "\n")
+
+print(Fore.WHITE + "With those words of encouragement you finally reach the top of Fire Mountain")
+print("Hot red lava drips from the sides of the mountain making a narrow ledge where you can stand safely")
+print("You start to see a shadow reflect from the sky and hear a ferocious roar")
+print("Just then a giant red dragon lands 10 feet infront of you shaking the floor where you stand")
+input("But just as you start to get a good look at the dragon it starts to transform..." + "\n")
+
+print("After only a few seconds the dragon transforms into a human/dragon hybrid ")
+print("Standing a few feet taller than you with long red hair followed by a long red scaly tail")
+print("Tho her body shape is mostly human you can still see her razar sharp claws and teeth")
+print("As you are inspecting her you start to stare at her glowing yellow eyes that seem filled with anger and sadness")
+input("She continuous to stare back at you slowly walking forward towards you she begins to speak..." + "\n")
+
+print(Fore.LIGHTRED_EX + "YOU MONSTER!!!")
+print("How many times are we going to keep doing this")
+print("No matter how many times we do this I will never be tricked by you or that evil wizard again!")
+print("I have to put an end to all this once and for all!")
+input(Fore.WHITE + "With tears in her eyes the dragon charges at you..." + "\n")
+
+print(Fore.RED + "PREPARE FOR BATTLE!!!" + "\n")
+
+print(Fore.MAGENTA + "This is it Hero this is all coming to an end")
+print("You can no longer dodge only attack and defend for your standard actions")
+print("But there are other actions you can take that are secret")
+print("Try doing somthing else besides attacking and defending and it will lead you to new paths")
+input("I pray you make the right choices Hero..." + "\n")
