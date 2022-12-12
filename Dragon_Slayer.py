@@ -8,6 +8,10 @@ armor = ["Leather_Helmet","Leather_Boots","Leather_Breastplate"]
 weapons = ["Wooden_Sword","Wooden_Shield"]
 items = ["Health_Potion"]
 
+special_action = ["Love","love","Loved","loved","Apologize","apologize","Lie","lie","Lied","lied","Mystery","mystery","Mysterious","mysterious","Voice","voice","Trick","trick",
+"Tricked","tricked","Betray","betray","Betrayed","betrayed","Curse","curse","Cursed","cursed","Sword","sword","Kill","kill","Monster","monster","Murder","murder",
+"Time","time","Cycle","cycle","Repeat","repeat","Talk","talk","Question","question","Ask","ask","Hero","hero","Evil","evil","Wizard","wizard"]
+
 tutorial =Fore.MAGENTA + '''Let me explain how combat works since this is your first time
 You will take turns fighing each other by attacking or defending
 All actions or responses you take will never be more then 1 word
@@ -551,7 +555,7 @@ while bear > 0:
     elif ranum == 2 and hero_action in ["Defend","defend"]:
         print("You bash the beetle bear to the ground with your shield stopping its attack!")
         bear -= 1
-    elif ranum == 1 and hero_action in ["Dodge","dodge"]:
+    elif ranum == 2 and hero_action in ["Dodge","dodge"]:
         print("You try to dodge out of the way but the beetle bear still manages to graze you!")
         hero_health -= 2
     elif ranum == 2:
@@ -668,9 +672,9 @@ while dragon_health > 0:
         print("Everyone knows who you are since everyone has met you before but I dont think anyone thinks of you as a true Hero!")
         print(Fore.WHITE + "The dragon shoots a small fireball at you quickly in frustration dealing a small amount of damage")
         hero_health -= 1
-    elif hero_action in ["Talk","talk","Question","question"]:
+    elif hero_action in ["Talk","talk","Question","question","Ask","ask"]:
         print(Fore.LIGHTRED_EX + "We have talked many times before Hero I dont know what other questions you could have")
-        print("You know I really thought you where differnt but here you are time and time again killing so many just to get back to me")
+        print("You know I really thought you where differnt but here you are time and time again killing so many just to get back to me...")
         print(Fore.WHITE + "The dragon shoots a small fireball at you quickly in frustration dealing a small amount of damage")
         hero_health -= 1
     elif hero_action in ["Time","time","Cycle","cycle","Repeat","repeat"]:
@@ -700,7 +704,47 @@ while dragon_health > 0:
         hero_health -= 1
     elif hero_action in ["Lie","lie","Lied","lied"]:
         print(Fore.LIGHTRED_EX + "The only lier here is you! Even after all those things you said to me you still attacked me!")
-        print("All that time we spent together when we first met but once you grabbed your sword it was like you where a differnt person...")
+        print("All that time we spent together when we first met was special but once you grabbed your sword it was like you where a differnt person...")
         print(Fore.WHITE + "Tears well up in her eyes as she shoots a small fireball at you quickly in frustration dealing a small amount of damage")
         hero_health -= 1
+    elif hero_action in ["Love","love","Loved","loved","Apologize","apologize"]:
+        print(Fore.LIGHTRED_EX + "Even after all this time you are still the same Hero that I once loved")
+        print("But I cant die here...if I die the wizard will become king of this land and everyone will suffer")
+        print(Fore.WHITE + "Tears well up in her eyes as she shoots a small fireball at you quickly in frustration dealing a small amount of damage")
+        hero_health -= 1
+    
+    if dragon == 1 and hero_action in ["Attack","attack"]:
+        print("You slash at the dragon while she charges into you! You both cut each other taking terrible damage")
+        dragon_health -= 4
+        hero_health -= 4
+    elif dragon == 1 and hero_action in ["Defend","defend"]:
+        print("You block the dragon's charge with your shield slamming her into the ground!")
+        dragon_health -= 2
+    elif dragon == 1 and hero_action not in special_action:
+        print("You do nothing as the dragon charges into you making you take a lot of damage!")
+        print("Think of your journey and everything that has happaned to uncover other actions")
+        hero_health -= 2
+    
+    if dragon == 2 and hero_action in ["Attack","attack"]:
+        print("You slash at the dragon while she breathes fire at you! You cut her while taking burn terrible damage")
+        dragon_health -= 3
+        hero_health -= 4
+    elif dragon == 2 and hero_action in ["Defend","defend"]:
+        print("You block the dragon's fire breath with your shield!")
+    elif dragon == 2 and hero_action not in special_action:
+        print("You do nothing as the dragon breathes fire at you!")
+        print("Think of your journey and everything that has happaned to uncover other actions")
+        hero_health -= 2
+
+    if dragon == 0 and hero_action in ["Attack","attack"]:
+        print("You slash at the dragon whith all your might as she tries to dodge out of the way! You deal decent damage")
+        dragon_health -= 2
+    elif dragon == 0 and hero_action in ["Defend","defend"]:
+        print("You defend yourself but the dragon did not attack!")
+    elif dragon == 0 and hero_action not in special_action:
+        print("Think of your journey and everything that has happaned to uncover other actions")
+
+    print()
+    if hero_health < 1:
+        break
     
