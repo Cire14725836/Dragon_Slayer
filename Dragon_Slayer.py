@@ -22,7 +22,7 @@ print(Fore.GREEN + Back.BLACK + "CHAPTER 0: THE BEGINNING" + "\n")
 
 print(Fore.WHITE + "You wake up in an unfamiliar land")
 print("You look around seeing you are in a forest of some sort with only a single path ahead of you")
-input("Before you figure out what to do you start to hear a voice..." + "\n")
+input("Before you figure out what to do you start to hear a voice from above..." + "\n")
 
 print(Fore.BLUE + "Hello Hero!")
 print("I have summoned you to this world to save us from the evil dragon")
@@ -460,6 +460,7 @@ input("From the cave ceiling drops a peculiar set of sword and shield...." + "\n
 print("At first glance looking at the sword and shield they look simple and made of what looks like steel")
 print("But stare long enough and inside the metal it almost looks like a stream of metalic liquid flows inside")
 print("But with your old sword and shield destroyed you really dont have a choice but to equipped these strange new ones")
+print("As soon as you grab hold of your new sword and shield you feel a very strange sense of power")
 weapons.clear()
 weapons.extend(["Living_Metal_Sword","Living_Metal_Shield"])
 print(weapons)
@@ -497,7 +498,7 @@ print("You find this black boulder strange since everything in this cave is a sh
 print("You find it even stranger when this black boulder starts to stand up and reveal its not a boulder but a bear beetle!")
 print("With the body of a bear almost twice your size instead of fur it has black beetle armor covering its body")
 print("With rows of giant sharp bear teeth and massive claws it also has a sharp prong beetle horn atop its head")
-input("The beetle bear roars and stomps towards you....""\n")
+input("The beetle bear roars and stomps towards you as you start to hear that fimilar mysterious voice...""\n")
 
 print(Fore.RED + "PREPARE FOR BATTLE!!!" + "\n")
 
@@ -600,6 +601,7 @@ print("The sky is black and filled with enough smoke to cover the 2 suns in the 
 input("With only a single road leading to the top of Fire Mountain you feel your journey is coming to an end..." + "\n")
 
 print(Fore.GREEN + "CHAPTER 3: THE DRAGON" + "\n")
+dragon_health = 10
 
 print(Fore.WHITE + "You start walking up the steep path towards the top of Fire Mountain")
 print("After everything you have been through you are exhausted and now have to fight a dragon")
@@ -637,3 +639,68 @@ print("You can no longer dodge only attack and defend for your standard actions"
 print("But there are other actions you can take that are secret")
 print("Try doing somthing else besides attacking and defending and it will lead you to new paths")
 input("I pray you make the right choices Hero..." + "\n")
+
+while dragon_health > 0:
+    dragon = random.randint(0,2)
+
+    if dragon == 1:
+        print(Fore.WHITE + "The dragon charges at you fangs and claws at the ready!")
+    elif dragon == 2:
+        print(Fore.WHITE + "The dragon prepares to shoot a fireball at you!")
+    elif dragon == 0:
+        print(Fore.WHITE + "The dragon inhales nearby lava")
+
+    hero_action = input("Will you attack, defend, or...: ")
+    hero_action = hero_action.replace(" ","")
+    print("")
+
+    if hero_action in ["Save","save","rescue","Rescue"]:
+        break
+    elif hero_action in ["Suicide","suicide"]:
+        break
+    elif hero_action in ["Evil","evil","Wizard","wizard"]:
+        print(Fore.LIGHTRED_EX + "That evil wizard is the reason a so called Hero has appeared in my land")
+        print("That Hero being you! How many creatures have you killed so far Hero? I bet it is to many to count!")
+        print(Fore.WHITE + "The dragon shoots a small fireball at you quickly in frustration dealing a small amount of damage")
+        hero_health -= 1
+    elif hero_action in ["Hero","hero"]:
+        print(Fore.LIGHTRED_EX + "Why would you ask me about the Hero... you are the one they call Hero")
+        print("Everyone knows who you are since everyone has met you before but I dont think anyone thinks of you as a true Hero!")
+        print(Fore.WHITE + "The dragon shoots a small fireball at you quickly in frustration dealing a small amount of damage")
+        hero_health -= 1
+    elif hero_action in ["Talk","talk","Question","question"]:
+        print(Fore.LIGHTRED_EX + "We have talked many times before Hero I dont know what other questions you could have")
+        print("You know I really thought you where differnt but here you are time and time again killing so many just to get back to me")
+        print(Fore.WHITE + "The dragon shoots a small fireball at you quickly in frustration dealing a small amount of damage")
+        hero_health -= 1
+    elif hero_action in ["Time","time","Cycle","cycle","Repeat","repeat"]:
+        print(Fore.LIGHTRED_EX + "How many times have we repeated this cycle? I really dont remeber it has been so many")
+        print("No matter how many times you die whether it is by my hands or someone elses you always come back to kill me!")
+        print(Fore.WHITE + "The dragon shoots a small fireball at you quickly in frustration dealing a small amount of damage")
+        hero_health -= 1
+    elif hero_action in ["Kill","kill","Monster","monster","Murder","murder"]:
+        print(Fore.LIGHTRED_EX + "The only monster here is you! How many thousands of creatures have you killed")
+        print("I'll never forget the first time we met when you tried to strike me down with that cursed sword I have never been able to fully recover since then!")
+        print(Fore.WHITE + "The dragon shoots a small fireball at you quickly in frustration dealing a small amount of damage")
+        hero_health -= 1
+    elif hero_action in ["Curse","curse","Cursed","cursed","Sword","sword"]:
+        print(Fore.LIGHTRED_EX + "That cursed sword is pure evil! Ever since you cut me with it I haven't been able to regain my full power")
+        print("I now don't have the strength to fight back against that evil wizard but I can still defeat you!")
+        print(Fore.WHITE + "The dragon shoots a small fireball at you quickly in frustration dealing a small amount of damage")
+        hero_health -= 1
+    elif hero_action in ["Trick","trick","Tricked","tricked","Betray","betray","Betrayed","betrayed"]:
+        print(Fore.LIGHTRED_EX + "I still remeber the first time we met when you betrayed my trust")
+        print("I was tricked by you when I thought you where special... I really thought you where just like me")
+        print(Fore.WHITE + "Tears well up in her eyes as she shoots a small fireball at you quickly in frustration dealing a small amount of damage")
+        hero_health -= 1
+    elif hero_action in ["Mystery","mystery","Mysterious","mysterious","Voice","voice"]:
+        print(Fore.LIGHTRED_EX + "Mysterious voice? I have no idea what you are talking about Hero...")
+        print(Fore.MAGENTA + "Sorry Hero I can't help you...The curse prevents me from aiding you any further")
+        print(Fore.WHITE + "The dragon shoots a small fireball at you quickly in frustration dealing a small amount of damage")
+        hero_health -= 1
+    elif hero_action in ["Lie","lie","Lied","lied"]:
+        print(Fore.LIGHTRED_EX + "The only lier here is you! Even after all those things you said to me you still attacked me!")
+        print("All that time we spent together when we first met but once you grabbed your sword it was like you where a differnt person...")
+        print(Fore.WHITE + "Tears well up in her eyes as she shoots a small fireball at you quickly in frustration dealing a small amount of damage")
+        hero_health -= 1
+    
