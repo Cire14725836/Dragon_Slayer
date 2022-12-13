@@ -466,7 +466,7 @@ print("But stare long enough and inside the metal it almost looks like a stream 
 print("But with your old sword and shield destroyed you really dont have a choice but to equipped these strange new ones")
 print("As soon as you grab hold of your new sword and shield you feel a very strange sense of power")
 weapons.clear()
-weapons.extend(["Living_Metal_Sword","Living_Metal_Shield"])
+weapons.extend(["Cursed_Sword","Cursed_Shield"])
 print(weapons)
 input(Fore.LIGHTYELLOW_EX + "Now you look like a true Hero ready to save our world..." + "\n")
 
@@ -606,6 +606,7 @@ input("With only a single road leading to the top of Fire Mountain you feel your
 
 print(Fore.GREEN + "CHAPTER 3: THE DRAGON" + "\n")
 dragon_health = 10
+save = (Fore.GREEN + "save")
 
 print(Fore.WHITE + "You start walking up the steep path towards the top of Fire Mountain")
 print("After everything you have been through you are exhausted and now have to fight a dragon")
@@ -658,17 +659,17 @@ while dragon_health > 0:
     hero_action = hero_action.replace(" ","")
     print("")
 
-    if hero_action in ["Save","save","rescue","Rescue"]:
+    if hero_action in ["Save","save"]:
         break
     elif hero_action in ["Suicide","suicide"]:
         break
     elif hero_action in ["Evil","evil","Wizard","wizard"]:
         print(Fore.LIGHTRED_EX + "That evil wizard is the reason a so called Hero has appeared in my land")
-        print("That Hero being you! How many creatures have you killed so far Hero? I bet it is to many to count!")
+        print("That Hero being you! How many creatures have you killed so far Hero? The only way this ends is if you die once and for all!")
         print(Fore.WHITE + "The dragon shoots a small fireball at you quickly in frustration dealing a small amount of damage")
         hero_health -= 1
     elif hero_action in ["Hero","hero"]:
-        print(Fore.LIGHTRED_EX + "Why would you ask me about the Hero... you are the one they call Hero")
+        print(Fore.LIGHTRED_EX + "Why would you ask me about the Hero... you know this isn't the first time we have met")
         print("Everyone knows who you are since everyone has met you before but I dont think anyone thinks of you as a true Hero!")
         print(Fore.WHITE + "The dragon shoots a small fireball at you quickly in frustration dealing a small amount of damage")
         hero_health -= 1
@@ -683,13 +684,13 @@ while dragon_health > 0:
         print(Fore.WHITE + "The dragon shoots a small fireball at you quickly in frustration dealing a small amount of damage")
         hero_health -= 1
     elif hero_action in ["Kill","kill","Monster","monster","Murder","murder"]:
-        print(Fore.LIGHTRED_EX + "The only monster here is you! How many thousands of creatures have you killed")
+        print(Fore.LIGHTRED_EX + "The only monster here is you! this will never end as long as you live")
         print("I'll never forget the first time we met when you tried to strike me down with that cursed sword I have never been able to fully recover since then!")
         print(Fore.WHITE + "The dragon shoots a small fireball at you quickly in frustration dealing a small amount of damage")
         hero_health -= 1
     elif hero_action in ["Curse","curse","Cursed","cursed","Sword","sword"]:
         print(Fore.LIGHTRED_EX + "That cursed sword is pure evil! Ever since you cut me with it I haven't been able to regain my full power")
-        print("I now don't have the strength to fight back against that evil wizard but I can still defeat you!")
+        print("I now don't have the strength to fight back against that wizard but I will do what I must even if I have to stike down the one I used to love...!")
         print(Fore.WHITE + "The dragon shoots a small fireball at you quickly in frustration dealing a small amount of damage")
         hero_health -= 1
     elif hero_action in ["Trick","trick","Tricked","tricked","Betray","betray","Betrayed","betrayed"]:
@@ -709,7 +710,7 @@ while dragon_health > 0:
         hero_health -= 1
     elif hero_action in ["Love","love","Loved","loved","Apologize","apologize"]:
         print(Fore.LIGHTRED_EX + "Even after all this time you are still the same Hero that I once loved")
-        print("But I cant die here...if I die the wizard will become king of this land and everyone will suffer")
+        print("But I can't die here...if I die the wizard will become king of this land and then who will " + save + Fore.LIGHTRED_EX + " us...")
         print(Fore.WHITE + "Tears well up in her eyes as she shoots a small fireball at you quickly in frustration dealing a small amount of damage")
         hero_health -= 1
     
@@ -748,3 +749,43 @@ while dragon_health > 0:
     if hero_health < 1:
         break
     
+if hero_action in ["Suicide","suicide"]:
+    print("You stop for a moment knowing this cycle has to end once and for all")
+    print("You grab your cursed sword aim it at your chest and impale yourself")
+    print(Fore.BLUE + "YOU FOOL!!! IF YOU DIE BY THE CRUSED BLADE THEN I WON'T BE ABLE TO BRING YOU BACK!!!")
+    print("...I guess i'll have to come up with a new plan to take over this world")
+    input("You got lucky this time dragon but at least I know you'll suffer watching the one you loved die before you eyes..." + "\n")
+
+    print(Fore.LIGHTRED_EX + "NO HERO!!! Why would you sacrifice yourself for a world that isn't even your own")
+    print("I'm so sorry Hero I wish I could " + save + Fore.LIGHTRED_EX + " you" )
+    print("Ever since we first met I knew you where a good person and that is why I fell in love with you")
+    print("You sacrificed yourself to save me and my world and for that I will always be greatful")
+    input("I promise your sacrifice will not be in vain! I will stop that evil wizard and..." + "\n")
+
+    print(Fore.WHITE + "You can no longer hear the dragon speak as you continue to lose blood")
+    print("You die a true Hero finally ending this terrible cycle" + "\n")
+    input("GOOD ENDING... THANKS FOR PLAYING!!!")
+    quit()
+
+if hero_health < 1:
+    print("The dragon steps back after delivering her final attack")
+    print("You have taken to much damage and are about to die")
+    print("At your finale moments you look up at a crying dragon whose eye's are filled with sadness")
+    input("Strangely enough this feels very familiar..." + "\n")
+
+    print(Fore.BLUE + "Looks like you couldn't kill the dragon this time either Hero")
+    print("At this point I can't say im suprised but nevertheless we will try again")
+    print("It doesn't matter how many times it takes you WILL kill that bastard dragon")
+    input("Bye for now Hero we will talk again soon even if you forget everything that has happened..." + "\n")
+
+    input("...")
+    input("...")
+    input("..." + "\n")
+
+    print(Fore.WHITE + "You wake up in an unfamiliar land")
+    print("You look around seeing you are in a forest of some sort with only a single path ahead of you")
+    input("Before you figure out what to do you start to hear a voice from above..." + "\n")
+    input(Fore.BLUE + "Hello Hero..." + "\n")
+
+    input(Fore.WHITE + "BAD ENDING... THANKS FOR PLAYING!!!")
+    quit()
