@@ -366,7 +366,7 @@ if choice_1 == "Right" or choice_1 == "right":
 
 print(Fore.GREEN + "CHAPTER 2: THE CLOUDY CAVERN" + "\n")
 reward = 0
-lie = ()
+lie =()
 bear = 7
 heal_2 = ()
 
@@ -789,3 +789,95 @@ if hero_health < 1:
 
     input(Fore.WHITE + "BAD ENDING... THANKS FOR PLAYING!!!")
     quit()
+
+if hero_action in ["Save","save"]:
+    print("You stop for a moment and stare at the dragon's eyes that are filled with pain and sorrow")
+    print("You have been called a Hero this entire time but have done nothing but kill and hurt others")
+    print("You throw your cursed sword and shield off the side of the mountain right into the hot lava")
+    input("For the first time since you started your journey you know what the right thing to do is..." + "\n")
+
+    print(Fore.BLUE + "HERO WHAT THE HELL DO YOU THINK YOU ARE DOING!!!")
+    print("I brought you to this world and every time you have died I brought you back to life!")
+    print("You will never return to your world now hero and without my help you won't live long either")
+    input("No matter one day I will make sure that dragon and you die a terrible painful death..." + "\n")
+
+    print(Fore.WHITE + "The voice in the sky is gone and hopefully for good now")
+    print("You look back to the dragon who has ran over to you and ebraced you")
+    print(Fore.LIGHTRED_EX + "Hero you're back! I know you don't remember but this is the Hero I fell in love with")
+    print("I wont let that evil wizard hurt you and with the cursed blade gone he has no control over you anymore")
+    input("I know when you injured me in the past you didn't mean to and together we will find a way to stop that wizard..." + "\n")
+
+    if "Health_Potion" in items:
+        print(Fore.WHITE + "She is still suffering from the wound you caused with your cursed blade")
+        print("You take out your health potion and hand it to the dragon telling her to drink it")
+        print("She is sceptical at first but then she drinks the potion")
+        input("To think that the health potion the wizard gave you would end up healing the dragon he hates so much..." + "\n")
+
+        print(Fore.LIGHTRED_EX + "Hero I am fully healed! I don't know what you had me drink but I'm back to full power!")
+        print("With this power I can finally destroy that evil wizard and we can both get our revenge!")
+        print("I know you have been through a lot Hero and you don't even remeber most of it")
+        input("But now this is your home Hero and together we can do anything..." + "\n")
+
+        print(Fore.WHITE + "The dragon steps back and changes from her humanoid form back to a giant dragon")
+        print("You get on her back and she takes off into the sky")
+        print("Together again but now with a common goal to destroy the evil wizard who orginally pit you both against each other")
+        input("You end one adventure just to start another but this time you're not alone..." + "\n")
+
+        input("TRUE ENDING!!! THANKS FOR PLAYING HERO!")
+        quit()
+
+    print(Fore.WHITE + "With no way to heal the dragon you feel bad for what you have done in the past")
+    print("But the past is in the past and now you both must find a way to stop the evil wizard")
+    input("You both look at each other and smile knowing that the vicious cycle has finally come to an end..." + "\n")
+    
+    input("GOOD ENDING... THANKS FOR PLAYING!!!")
+    quit()
+
+print("You take a step back looking at the injured dragon on her last leg")
+print("You grip your sword so hard your fingers start to become pruple")
+print("You are overcome with rage knowing that this evil dragon is the one who has made you go through this hellish journey")
+input("You stand infront of her and look into her eyes full of defeat and sadness..." + "\n")
+
+if "Health_Potion" in items:
+    print(Fore.MAGENTA + "HERO!!! sto.  pl..e  yo.  ..ve  ..  s.v.  .er  ... .. .")
+    print(Fore.WHITE + "The voice in shambles is finally gone and you are unsure of what they even said")
+    print("But for just a moment you regain your sanity")
+    last_chance = ()
+
+    while last_chance not in ["yes","Yes","no","No"]:
+        last_chance = input("You currently have a health potion would you like to use it on the dragon? yes/no: ")
+        last_chance = last_chance.replace(" ","")
+
+    if last_chance in ["Yes","yes"]:
+        print()
+        print("You feel like your mind is going to break into pieces")
+        print("You drop your shield and take out the health potion forcing the dragon to drink it")
+        print("The dragon spits some of it out but you are able to make her drink half of it")
+        input("You see the dragon partially healed before all you see is red and you lose control of yourself..." + "\n")
+
+        print("The next thing you feel is a sense of falling...")
+        print("After that you feel burning lava all around your body...")
+        print("Multiple voices try to reach out to you but all you hear is nothing...")
+        input("You take solace knowing the finale choice you made was your own..." + "\n")
+
+        input("GOOD/BAD ENDING... THANKS FOR PLAYING!!!")
+        quit()
+    else:
+        print("..." + "\n")
+
+print("With all your strength you stab the dragon right throught the chest")
+print("You see her try and say somthing with her last breath but hear nothing")
+input("You step back looking at the lifeless corpse of the dragon knowing this is the end on your journey..." + "\n")
+
+print(Fore.BLUE + "Finally Hero! I can't even count how many attempts that took")
+print("You have been through a hellish journey more then you even remeber Hero")
+print("A promise is a promise I will return you to your home world")
+input("Thank you Hero now I can finally become king..." + "\n")
+
+print(Fore.WHITE + "You wake up in bed feeling very well rested")
+print("You get up looking out the window into the sky seeing the fimilar sun all alone")
+print("You feel a sense of strength and confidence from completing your journey")
+input("Knowing that going forward whatever problems you may face you can easily destroy them..." + "\n")
+
+input("EVIL ENDING... THANKS FOR PLAYING!!!")
+quit()
