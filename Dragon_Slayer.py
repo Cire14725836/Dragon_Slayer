@@ -2,7 +2,6 @@ from colorama import init, Fore, Back, Style
 init()
 
 import random
-import pyfiglet
 
 armor = ["Leather_Helmet","Leather_Boots","Leather_Breastplate"]
 weapons = ["Wooden_Sword","Wooden_Shield"]
@@ -15,12 +14,12 @@ special_action = ["Love","love","Loved","loved","Apologize","apologize","Lie","l
 tutorial =Fore.MAGENTA + '''Let me explain how combat works since this is your first time
 You will take turns fighing each other by attacking or defending
 All actions or responses you take will never be more then 1 word
-You win by making the enemies health points reach zero and vice versa lose if you health points hit zero
+You win by making the enemies health points reach zero and lose if your health points hit zero
 observing who you are fighting and what actions they will take will be key to victory
 You start with 20 health btw and after every battle you will be told your remaining health
 Good luck in battle and I cant wait to talk to you again soon~'''
 
-print(Fore.RED + pyfiglet.figlet_format ("DRAGON SLAYER") + "\n")
+print(Fore.RED + "DRAGON SLAYER" + "\n")
 
 print(Fore.GREEN + Back.BLACK + "CHAPTER 0: THE BEGINNING" + "\n")
 
@@ -32,7 +31,7 @@ print(Fore.BLUE + "Hello Hero!")
 print("I have summoned you to this world to save us from the evil dragon")
 print("If you ever want to return to your world you must do as I tell you")
 print("I have given you the basic equipment to start your quest")
-print("The path forward will have you facing many challenges that will prepare you for the finale fight against the evil dragon!")
+print("The path forward will have you facing many challenges that will prepare you for the final fight against the evil dragon!")
 input("Now go forth Hero I will continue watching you from afar" + "\n")
 
 print(Fore.WHITE + "With a brief explanation from an unknown being you stand up and prepare for your quest")
@@ -52,7 +51,7 @@ print(Fore.GREEN + "CHAPTER 1: A FORK IN THE ROAD" + "\n")
 print(Fore.WHITE + "As your walking you start to look around at a fimilar yet differnt environment")
 print("Many trees with leaves bright blue instead of green")
 print("Small creatures resembling rats have wings on their backs jumping from tree to tree")
-print("When you look to the sky you see not 1 but 2 suns shining brightly in the distance")
+print("When you look to the sky you see not one but two suns shining brightly in the distance")
 print("You start to think about what other differences there could be between this world and yours")
 input("But before you can continue that thought you are stopped with a fork in the road... " + "\n")
 
@@ -232,11 +231,11 @@ if choice_1 == "Right" or choice_1 == "right":
     print("You can start to hear a lound thumping in the distance making all the small animals hide in the snow")
     input("A giant grey figure jumps from behind a tree right in front of you catching you by suprise...." + "\n")
 
-    print("As you gain your composure standing in front of you is a giant grey wolf hare")
-    print("The creature has thick greay hair with giant rabbit legs giving it the ability to pounce great distances")
+    print("As you gain your composure standing in front of you is a giant gray wolf hare")
+    print("The creature has thick gray hair with giant rabbit legs giving it the ability to pounce great distances")
     print("The rest of the body resembles that of a wolf except a round wide eyed rabbit face")
     print("But as it growls you can see giant rows of razar sharp teeth inside its mouth")
-    input("The creature is not friendly at all and ready to to rip you to shreds..." + "\n")
+    input("The creature is not friendly at all and ready to rip you to shreds..." + "\n")
 
     print(Fore.RED + "PREPARE FOR BATTLE!!!" + "\n")
     wolf_health = 3
@@ -288,7 +287,7 @@ if choice_1 == "Right" or choice_1 == "right":
         quit()
 
     print()
-    print("With the finale slash of your sword the wolf hare rolls over and passes away")
+    print("With the final slash of your sword the wolf hare dies")
 
     print(f"Your current health is {hero_health}")
     if hero_health == 20:
@@ -310,14 +309,14 @@ if choice_1 == "Right" or choice_1 == "right":
     
     print()
 
-    print("With the wolf hare defeated you continue marching forward hoping thats the last monster you have to battle")
-    print("As you continue forward on the snowy path it becomes colder and harder to see in front of you")
+    print("With the wolf hare defeated you continue marching forward hoping that is the last monster you have to battle")
+    print("The snowy path becomes colder and harder to see in front of you")
     print("If you stop for even a moment you fear your body will freeze in place making you a man sized icicle")
     print("After a few more minutes of walking you almost trip over somthing sticking out of the snow")
-    input("You dig around the snow and notice its a set of armor with some old human looking bones next to it..." + "\n")
+    input("You dig around the snow and notice a set of armor with some old human looking bones next to it..." + "\n")
 
     print("Well whoever owned this armor before doesnt need it anymore")
-    print("You inspect the armor and see its made of pure white metal and tho stronger than your leather armor it is much lighter")
+    print("You inspect the armor and see its made of pure white metal and though stronger than your leather armor it is much lighter")
     print("You toss your old armor to the side and equip your new armor")
     armor.clear()
     armor.extend(["White_Metal_Helmet","White_Metal_Boots","White_Metal_Breatplate"])
@@ -326,12 +325,12 @@ if choice_1 == "Right" or choice_1 == "right":
 
     print(Fore.CYAN + "You are almost here just a little further!")
     print(Fore.WHITE + "You walk forwards towards the sound of the voice")
-    print("After a few minutes the snow settles and standing infront of you is a giant snowman double your size")
+    print("After a few minutes the snow settles and standing in front of you is a giant snowman double your size")
     print(Fore.CYAN +  "A HERO!!! It has been ages since I got to talk to one of those!")
     print("Solve my riddle and I will give you a very special present!")
     input("But fail and you just might freeze to death <3..." + "\n")
 
-    print("What kind of crystals dont break when they hit the ground?")
+    print("A crystal that doesn't break when it hits the ground")
 
     while hero_answ not in ["snow",'Snow',"ice","Ice"]:
         hero_answ = input(Fore.CYAN + "WHAT AM I???: ")
@@ -354,13 +353,13 @@ if choice_1 == "Right" or choice_1 == "right":
         print("You pick it up and relize its a gun...wait a gun isnt that from your world?")
         print("Upon closer inspection you can tell its a handgun with only a single bullet")
         items.append("Pistol")
-        input("Before you can ask how the snowman got this a heavy gust of wind starts to blow...")
+        input("Before you can ask how the snowman got this, a heavy gust of wind starts to blow...")
     
     print()
 
     print("The wind intensifies to the point where you are lifted into the air")
-    print(Fore.CYAN + "Bye bye Hero and goodluck on your journey!")
-    print(Fore.WHITE + "The cold wind blast you into the sky so fast and so high you arent sure where you are or where you are going")
+    print(Fore.CYAN + "Bye bye Hero and good luck on your journey!")
+    print(Fore.WHITE + "The cold wind blasts you into the sky so fast and so high you are not sure where you are or where you are going")
     print("After a few minutes the gust subsides and you land on to a soft white fluffy floor")
     input("You look around and can tell you are no longer in the snowy forest but in a new unkown area..." + "\n")
 
@@ -372,8 +371,8 @@ heal_2 = ()
 
 print(Fore.WHITE + "You stand up and relize that the ground has been replaced by clouds")
 print("Not just the ground but everything around you is made of differnt size and shaped clouds")
-print("You look up into the sky and still see the familiar 2 suns now joined by black birds with 2 sets of wings")
-print("being surrounded by cloud like trees, bushes , and even rocks the only thing you can do is move forwards")
+print("You look up into the sky and still see the familiar two suns now joined by black birds with two sets of wings")
+print("being surrounded by cloud-like trees, bushes, and even rocks the only thing you can do is move forward")
 input("But before you move forward you start to hear a fimilar voice..." + "\n")
 
 print(Fore.BLUE + "Hero I am very proud of you for making it this far!")
@@ -384,9 +383,9 @@ input("Good luck Hero..." + "\n")
 
 print(Fore.WHITE + "Good to know whoever forced you into this situation is still watching")
 print("But with that unneeded commentary you start marching forward")
-print("As your walking the path is full of many inclines and declines and you are able to see many cloud mountains in the distance")
+print("As you are walking, the path is full of many inclines and declines and you are able to see many cloud mountains in the distance")
 print("After about and hour or so the path starts to lead into a cloud cavern in a mountain")
-input("As soon as you step into the cavern you are greeted by a very stranger being...." + "\n")
+input("As soon as you step into the cavern you are greeted by a very strang being...." + "\n")
 
 print("A giant black arm is perched on the side of a nearby rock")
 print("The arm lifts up seemingly unable to move from its position")
@@ -396,11 +395,11 @@ input("The hand is staring right at you and even tho it has no mouth it starts t
 print(Fore.LIGHTYELLOW_EX + "Hello Hero I have been waiting for you")
 print("Continue through this cavern and you will make it to Fire Mountain")
 print("But if you go the way you are now you will surely die")
-print("So you shall play against me in 3 separate games and for each game you win I will give you somthing to aid you on your journey")
-input("For the first game we will play a game called sword or shield...." + "\n")
+print("So you shall play against me in three separate games and for each game you win I will give you somthing to aid you on your journey")
+input("The first game we will play is a game called sword or shield...." + "\n")
 
-print(Fore.WHITE + "The hand reaches over behind a rock picking up a coin with a sword on 1 side and a shield on the other")
-print(Fore.LIGHTYELLOW_EX + "The game is simple ill flick this coin into the air and while its in the air you call sword or shield")
+print(Fore.WHITE + "The hand reaches over behind a rock picking up a coin with a sword on one side and a shield on the other")
+print(Fore.LIGHTYELLOW_EX + "The game is simple i'll flick this coin into the air and while its in the air you call sword or shield")
 print("If it lands on the side you called you win! If not you lose")
 coin = input("So what will it be sword or shield?: ")
 
@@ -415,8 +414,8 @@ else:
 print(Fore.LIGHTYELLOW_EX + "You won Hero good job I knew you could do it")
 input("Thats 1 out of 3 now on to the next game...." + "\n")
 
-print("The next game is very similar ill roll a dice and you need to say if it will be odd or even")
-print(Fore.WHITE + "The hand reaches over behind the rock again this time pulling out a 6 sided dice")
+print("The next game is very similar i'll roll a die and you need to predict if it will be odd or even")
+print(Fore.WHITE + "The hand reaches over behind the rock again this time pulling out a 6 sided die")
 print(Fore.LIGHTYELLOW_EX + "You have a 50/50 chance let's see if your luck will not run out")
 dice_answ = input("So what will it be odd or even: ")
 dice_answ = dice_answ.replace(" ","")
@@ -429,41 +428,41 @@ while dice_answ not in ["odd","Odd","even","Even"]:
 
 input("So you think it will be " + dice_answ + " let's see if your right..." + "\n")
 
-print(Fore.WHITE + f"The hand rolls the dice and it lands on {dice}")
+print(Fore.WHITE + f"The hand rolls the die and it lands on {dice}")
 if dice in [1,3,5]:
     dice = "odd"
 else:
     dice = "even"
 
 if dice_answ in ["odd","Odd"] and dice == "odd":
-    print("You won again!")
+    print(Fore.LIGHTYELLOW_EX + "You won again!")
     reward += 1
 elif dice_answ in ["even","Even"] and dice == "even":
-    print("You won again!")
+    print(Fore.LIGHTYELLOW_EX + "You won again!")
     reward += 1
 else:
-    print("You lost...")
+    print(Fore.LIGHTYELLOW_EX + "You lost...")
 
-print(Fore.LIGHTYELLOW_EX + "Ok Hero only 1 game left!")
-input("This game will be a bit different from the rest because you just need to answer 1 question...." + "\n")
+print("Ok Hero only one game left!")
+input("This game will be a bit different from the rest you need to answer only one question...." + "\n")
 
 while lie not in ["Yes","yes","No","no"]:
     lie = input("Has anyone lied to you since you started your journey? yes/no: ")
     lie = lie.replace(" ","")
 
-print("I see so that is what you truly belive?")
+print("So that's what you truly belive?")
 print("I hope you thought long and hard about your answer because going forward everything will only get harder")
-input("But enought of that lets get to your rewards..." + "\n")
+input("But enough of that lets get to your rewards..." + "\n")
 
-print("For winning the coin game sword or shield I will be giving you a new sword AND shield")
-print("Honestly against any creature you face going forward your wooden sword and shield would do nothing")
+print("For winning the coin game, sword or shield, I will be giving you a new sword AND shield")
+print("Honestly against any creature you face going forward your wooden sword and shield would have done nothing")
 print(Fore.WHITE + "The giant hand grabs your sword and shield and crushes it to little woodden pieces")
 print("The hand makes a fist and slams the ground shaking the entire cloudy cave")
-input("From the cave ceiling drops a peculiar set of sword and shield...." + "\n")
+input("From the cave ceiling, drops a peculiar set of sword and shield...." + "\n")
 
 print("At first glance looking at the sword and shield they look simple and made of what looks like steel")
 print("But stare long enough and inside the metal it almost looks like a stream of metalic liquid flows inside")
-print("But with your old sword and shield destroyed you really dont have a choice but to equipped these strange new ones")
+print("But with your old sword and shield destroyed you really dont have a choice but to equipt these strange new ones")
 print("As soon as you grab hold of your new sword and shield you feel a very strange sense of power")
 weapons.clear()
 weapons.extend(["Cursed_Sword","Cursed_Shield"])
@@ -480,7 +479,7 @@ else:
     print("You lost the odd or even game")
     input("So unfortunately I will not be giving you a reward for this game..." + "\n")
 
-print("And for your finale reward I will give you advice depending on how you answered the finale question")
+print("And for your final reward I will give you advice for answering the final question")
 if lie in ["Yes","yes"]:
     print("So you think someone has lied to you throughout your journey")
     print("I am not sure if that is true or false but what I can tell you is blindly trusting anyone is a bad idea")
@@ -492,7 +491,7 @@ else:
     print("Either way this will not change your fate in that you must face the fire dragon in battle")
     input("Unfortunately that is all I can say but I wish you the best of luck Hero..." + "\n")
 
-print(Fore.WHITE + "With those finale words the giant hand slumps over and closes its eye")
+print(Fore.WHITE + "With those final words the giant hand slumps over and closes its eye")
 print("With new knowledge and equipment you march deeper into the cave")
 print("While walking you think of all the strange creatures you have seen and conversations you have had since waking up in this new world")
 print("But the one thing that sticks out the most is that everyone knows you as the Hero")
@@ -500,9 +499,9 @@ input("A question you hope to find the answer to but while pondering you are sto
 
 print("You find this black boulder strange since everything in this cave is a shade of white")
 print("You find it even stranger when this black boulder starts to stand up and reveal its not a boulder but a bear beetle!")
-print("With the body of a bear almost twice your size instead of fur it has black beetle armor covering its body")
+print("With the body size of a bear almost twice yours and instead of fur it has black beetle armor covering its body")
 print("With rows of giant sharp bear teeth and massive claws it also has a sharp prong beetle horn atop its head")
-input("The beetle bear roars and stomps towards you as you start to hear that fimilar mysterious voice...""\n")
+input("The bear beetle roars and stomps towards you as you start to hear that fimilar mysterious voice...""\n")
 
 print(Fore.RED + "PREPARE FOR BATTLE!!!" + "\n")
 
@@ -525,11 +524,11 @@ while bear > 0:
     ranum = random.randint(0,2)
 
     if ranum == 1:
-        print(Fore.WHITE + "The beetle bear prepares to charge at you!")
+        print(Fore.WHITE + "The bear beetle prepares to charge at you!")
     elif ranum == 2:
-        print(Fore.WHITE + "The beetle bear lifts its arms to slash you!")
+        print(Fore.WHITE + "The bear beetle lifts its arms to slash you!")
     else:
-        print(Fore.WHITE + "The beetle bear rours to intimidate you")
+        print(Fore.WHITE + "The bear beetle roars to intimidate you")
     
     hero_action = input("Will you attack, defend, or dodge?: ")
     hero_action = hero_action.replace(" ","")
@@ -553,7 +552,7 @@ while bear > 0:
         bear -= 2
         hero_health -= 4
     elif ranum == 2 and hero_action in ["Defend","defend"]:
-        print("You bash the beetle bear to the ground with your shield stopping its attack!")
+        print("You bash the bear beetle to the ground with your shield stopping its attack!")
         bear -= 1
     elif ranum == 2 and hero_action in ["Dodge","dodge"]:
         print("You try to dodge out of the way but the beetle bear still manages to graze you!")
@@ -563,7 +562,7 @@ while bear > 0:
         hero_health -= 4
     
     if ranum == 0 and hero_action in ["Attack","attack"]:
-        print("The beetle bears rour did not intimidate you so you slash it with all your might dealing solid damage")
+        print("The bear beetle's roar did not intimidate you so you slash it with all your might dealing solid damage")
         bear -= 2
     elif ranum == 0:
         print("You where intimidated by the bear beetle and didn't take your opportunity to attack")
@@ -611,7 +610,7 @@ save = (Fore.GREEN + "save")
 print(Fore.WHITE + "You start walking up the steep path towards the top of Fire Mountain")
 print("After everything you have been through you are exhausted and now have to fight a dragon")
 print("You think of all the creatures and beings you have talked to and can't make heads or tails of it all")
-print("How did they all know who you where and why was I asked if I was lied to before")
+print("How did they all know who you where and why where you asked if I was lied to before")
 input("But before you even finish that thought you start to hear that familiar voice..." + "\n")
 
 print(Fore.BLUE + "Hero I am glad you made it to Fire Mountain!")
@@ -620,20 +619,20 @@ print("If you do not I will make sure you are trapped in this world forever!")
 input("Fulfill your destiny Hero it's your only choice..." + "\n")
 
 print(Fore.WHITE + "With those words of encouragement you finally reach the top of Fire Mountain")
-print("Hot red lava drips from the sides of the mountain making a narrow ledge where you can stand safely")
-print("You start to see a shadow reflect from the sky and hear a ferocious roar")
-print("Just then a giant red dragon lands 10 feet infront of you shaking the floor where you stand")
+print("Hot red lava dripes from the sides of the mountain making only a narrow ledge where you can walk safely")
+print("You start to see a shadow appear in the sky and hear a ferocious roar")
+print("Just then a giant red dragon lands 10 feet in front of you shaking the floor where you stand")
 input("But just as you start to get a good look at the dragon it starts to transform..." + "\n")
 
 print("After only a few seconds the dragon transforms into a human/dragon hybrid ")
 print("Standing a few feet taller than you with long red hair followed by a long red scaly tail")
-print("Tho her body shape is mostly human you can still see her razar sharp claws and teeth")
+print("Though her body shape is mostly human you can still see her razar sharp claws and teeth")
 print("As you are inspecting her you start to stare at her glowing yellow eyes that seem filled with anger and sadness")
-input("She continuous to stare back at you slowly walking forward towards you she begins to speak..." + "\n")
+input("She continuous to stare back at you, slowly walking forward towards you, she begins to speak..." + "\n")
 
 print(Fore.LIGHTRED_EX + "YOU MONSTER!!!")
 print("How many times are we going to keep doing this")
-print("No matter how many times we do this I will never be tricked by you or that evil wizard again!")
+print("No matter how many times we do this I will never be tricked by you or that evil Wizard again!")
 print("I have to put an end to all this once and for all!")
 input(Fore.WHITE + "With tears in her eyes the dragon charges at you..." + "\n")
 
@@ -798,13 +797,13 @@ if hero_action in ["Save","save"]:
 
     print(Fore.BLUE + "HERO WHAT THE HELL DO YOU THINK YOU ARE DOING!!!")
     print("I brought you to this world and every time you have died I brought you back to life!")
-    print("You will never return to your world now hero and without my help you won't live long either")
-    input("No matter one day I will make sure that dragon and you die a terrible painful death..." + "\n")
+    print("You will never return to your world now and without my help you won't live long either")
+    input("No matter, one day I will make sure that dragon and you die a terrible painful death..." + "\n")
 
     print(Fore.WHITE + "The voice in the sky is gone and hopefully for good now")
     print("You look back to the dragon who has ran over to you and ebraced you")
     print(Fore.LIGHTRED_EX + "Hero you're back! I know you don't remember but this is the Hero I fell in love with")
-    print("I wont let that evil wizard hurt you and with the cursed blade gone he has no control over you anymore")
+    print("I wont let that evil wizard hurt you and with the cursed blade now gone he has no control over you anymore")
     input("I know when you injured me in the past you didn't mean to and together we will find a way to stop that wizard..." + "\n")
 
     if "Health_Potion" in items:
@@ -816,12 +815,12 @@ if hero_action in ["Save","save"]:
         print(Fore.LIGHTRED_EX + "Hero I am fully healed! I don't know what you had me drink but I'm back to full power!")
         print("With this power I can finally destroy that evil wizard and we can both get our revenge!")
         print("I know you have been through a lot Hero and you don't even remeber most of it")
-        input("But now this is your home Hero and together we can do anything..." + "\n")
+        input("But now this is your home and together we can do anything..." + "\n")
 
         print(Fore.WHITE + "The dragon steps back and changes from her humanoid form back to a giant dragon")
         print("You get on her back and she takes off into the sky")
-        print("Together again but now with a common goal to destroy the evil wizard who orginally pit you both against each other")
-        input("You end one adventure just to start another but this time you're not alone..." + "\n")
+        print("Together again but now with a common goal to destroy the evil wizard who orginally pit you against each other")
+        input("You end one adventure just to start another but this time you are not alone..." + "\n")
 
         input("TRUE ENDING!!! THANKS FOR PLAYING HERO!")
         quit()
