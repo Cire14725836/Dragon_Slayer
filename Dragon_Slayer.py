@@ -9,7 +9,7 @@ items = ["Health_Potion"]
 
 special_action = ["Love","love","Loved","loved","Apologize","apologize","Lie","lie","Lied","lied","Mystery","mystery","Mysterious","mysterious","Voice","voice","Trick","trick",
 "Tricked","tricked","Betray","betray","Betrayed","betrayed","Curse","curse","Cursed","cursed","Sword","sword","Kill","kill","Monster","monster","Murder","murder",
-"Time","time","Cycle","cycle","Repeat","repeat","Talk","talk","Question","question","Ask","ask","Hero","hero","Evil","evil","Wizard","wizard"]
+"Time","time","Cycle","cycle","Repeat","repeat","Talk","talk","Question","question","Ask","ask","Hero","hero","Evil","evil","Wizard","wizard","Dragon","dragon","Journey","journey"]
 
 tutorial =Fore.MAGENTA + '''Let me explain how combat works since this is your first time
 You will take turns fighing each other by attacking or defending
@@ -85,14 +85,14 @@ if choice_1 == "Left" or choice_1 == "left":
     print()
     print(Fore.WHITE + "You decide to take the left path")
     print("Heat and poison have never held you back before so im sure you will be fine")
-    print("You start walking forward on a sandy path and where there were once trees are now replaced by strangly shaped red cacti")
-    print("The heat from the 2 suns in the sky intensifies and with no trees to give you shade the suns rays heat your skin like you have never felt before")
-    input("You trudge forward as the sand beneath your feet starts to humble..." + "\n")
+    print("You start walking forward on a sandy path and where there were once trees are now replaced by strangely shaped red cacti")
+    print("The heat from the two suns in the sky intensifies and with no trees to give you shade the sun's rays heat your skin like you have never felt before")
+    input("You trudge forward as the sand beneath your feet starts to rumble..." + "\n")
 
     print("You stop as the shaking intensifies")
     print("In front of you the hot sand blast into the air and a creature emerges from the ground")
-    print("A giant dark red scorpion stands on its 8 legs staring at you with its 4 giant pitch black eyes")
-    print("About half the size of you and instead of having 2 pincers like a scorpion from your world has it has claws with sharp long nails made for digging and slashing")
+    print("A giant dark red scorpion stands on its 8 legs, staring at you with its 4 giant pitch black eyes")
+    print("About half the size of you and instead of having 2 pincers like a scorpion from your world, it has claws with sharp long nails made for digging and slashing")
     input("It hisses at you and scurries towards you...." + "\n")
 
     print(Fore.RED + "PREPARE FOR BATTLE!!!" + "\n")
@@ -169,19 +169,19 @@ if choice_1 == "Left" or choice_1 == "left":
 
     print("With the scorpion slain you continue marching forward hoping thats the last monster you have to battle")
     print("After what feels like hours you come across a tall rectangular shaped temple with stairs leading to the top")
-    print("You start climbing the stairs with every step making you feel like your getting closer to the suns in the sky")
-    print("Once you reach the top infront of you is a chest and golem statue with a flame on its head ")
+    print("You start climbing the stairs with every step making you feel like you're getting closer to the suns in the sky")
+    print("Once you reach the top in front of you is a chest and golem statue with a flame on its head")
     input("You step towards the chest and using all your might lift the lid now able to get whatever is inside..." + "\n")
 
     print("Inside the box is a set of dark black metal armor!")
-    print("You put on your new armor and tho much stronger then your old leather armor it is strangely lighter")
+    print("You put on your new armor and tho much stronger then your old leather armor it is lighter")
     armor.clear()
     armor.extend(["Black_Metal_Helmet","Black_Metal_Boots","Black_Metal_Breatplate"])
     print(armor)
     input("With your new armor on you throw your old set of leather armor into the fire on top the golem statues head but suddenly hear a booming voice.... " + "\n")
 
     print(Fore.CYAN + "WHO DARES DISTURBE MY SLUMBER")
-    print(Fore.WHITE + "The golem statue tho not moving is speaking to you!")
+    print(Fore.WHITE + "The golem statue's mouth is not moving, but it is speaking to you!")
     print(Fore.CYAN + "AHH I SEE WE HAVE A NEW HERO")
     print("SOLVE MY RIDDLE AND I WILL GIVE YOU A REWARD YOU ARE SURE TO LOVE")
     input("BUT FAIL AND YOU SHALL SUFFER THE CONSEQUENCES..." + "\n")
@@ -217,9 +217,9 @@ if choice_1 == "Left" or choice_1 == "left":
     print()
 
     print("The floor below you opens up and you start to fall for what feels like an eternity")
-    print("You cant understand how you have been falling for so long when it didnt take you this long to climb the temple")
+    print("You can't understand how you have been falling for so long when it didn't take you this long to climb the temple")
     print("But at that moment you land onto a soft white fluffy floor")
-    input("You look around and can tell you no longer in the dessert but in a new unkown area...")
+    input("You look around and can tell you are no longer in the desert, but in a new unknown area..." + "\n")
     
 if choice_1 == "Right" or choice_1 == "right":
     print()
@@ -641,7 +641,8 @@ print(Fore.RED + "PREPARE FOR BATTLE!!!" + "\n")
 print(Fore.MAGENTA + "This is it Hero this is all coming to an end")
 print("You can no longer dodge only attack and defend for your standard actions")
 print("But there are other actions you can take that are secret")
-print("Try doing somthing else besides attacking and defending and it will lead you to new paths")
+print("Remember all actions are only one word and the secret actions can be a verb or a noun")
+print("Try doing somthing else besides attacking and defending and you will gain new information")
 input("I pray you make the right choices Hero..." + "\n")
 
 while dragon_health > 0:
@@ -711,6 +712,11 @@ while dragon_health > 0:
         print(Fore.LIGHTRED_EX + "Even after all this time you are still the same Hero that I once loved")
         print("But I can't die here...if I die the wizard will become king of this land and then who will " + save + Fore.LIGHTRED_EX + " us...")
         print(Fore.WHITE + "Tears well up in her eyes as she shoots a small fireball at you quickly in frustration dealing a small amount of damage")
+        hero_health -= 1
+    elif hero_action in ["Dragon","dragon","Journey","journey"]:
+        print(Fore.LIGHTRED_EX + "You where summoned here and made to go on this journey just to kill an evil dragon")
+        print("The only evil one here is that Wizard! How many times have we done this now Hero...")
+        print(Fore.WHITE + "The dragon shoots a small fireball at you quickly in frustration dealing a small amount of damage")
         hero_health -= 1
     
     if dragon == 1 and hero_action in ["Attack","attack"]:
