@@ -84,7 +84,7 @@ guess_count = 0
 if choice_1 == "Left" or choice_1 == "left":
     print()
     print(Fore.WHITE + "You decide to take the left path")
-    print("Heat and poison have never held you back before so im sure you will be fine")
+    print("Heat and poison have never held you back before so i'm sure you will be fine")
     print("You start walking forward on a sandy path and where there were once trees are now replaced by strangely shaped red cacti")
     print("The heat from the two suns in the sky intensifies and with no trees to give you shade the sun's rays heat your skin like you have never felt before")
     input("You trudge forward as the sand beneath your feet starts to rumble..." + "\n")
@@ -228,7 +228,7 @@ if choice_1 == "Right" or choice_1 == "right":
     print("You start to walk forward as the dirt beneath your feet is slowly replaced by snow")
     print("Thick white clouds and tall trees hide the suns in the sky making you wish you had somthing to help fight against this freezing weather")
     print("Around you are small critters covered in thick white hair camouflaging with the pure white snow making it hard to see them at all")
-    print("You can start to hear a lound thumping in the distance making all the small animals hide in the snow")
+    print("You start to hear a lound thumping in the distance making all the small animals hide in the snow")
     input("A giant grey figure jumps from behind a tree right in front of you catching you by suprise...." + "\n")
 
     print("As you gain your composure standing in front of you is a giant gray wolf hare")
@@ -534,31 +534,31 @@ while bear > 0:
     hero_action = hero_action.replace(" ","")
 
     if ranum == 1 and hero_action in ["Attack","attack"]:
-        print("You slash at the beetle bear while its charges into you! You hurt the beetle bear but took terrible damage")
+        print("You slash at the bear beetle while its charges into you! You hurt the beetle bear but took terrible damage")
         bear -= 2
         hero_health -= 4
     elif ranum == 1 and hero_action in ["Defend","defend"]:
-        print("You block the beetle bears charge with your shield but still take minor damage from the impact!")
+        print("You block the bears beetle charge with your shield but still take minor damage from the impact!")
         hero_health -= 2
     elif ranum == 1 and hero_action in ["Dodge","dodge"]:
-        print("You successfully dodge the beetle bear charge making it slam into the cavern wall")
+        print("You successfully dodge the bear beetle charge making it slam into the cavern wall")
         bear -= 1
     elif ranum == 1:
-        print("You do nothing as the beetle bear charges into you making you take terrible damage!")
+        print("You do nothing as the bear beetle charges into you making you take terrible damage!")
         hero_health -= 4
     
     if ranum == 2 and hero_action in ["Attack","attack"]:
-        print("You slash the beetle bear as it slashes at you as well! You both take heavy damage")
+        print("You slash the bear beetle as it slashes at you as well! You both take heavy damage")
         bear -= 2
         hero_health -= 4
     elif ranum == 2 and hero_action in ["Defend","defend"]:
         print("You bash the bear beetle to the ground with your shield stopping its attack!")
         bear -= 1
     elif ranum == 2 and hero_action in ["Dodge","dodge"]:
-        print("You try to dodge out of the way but the beetle bear still manages to graze you!")
+        print("You try to dodge out of the way but the bear beetle still manages to graze you!")
         hero_health -= 2
     elif ranum == 2:
-        print("You do nothing as the beetle bear slashes you with both its claws making you take terrible damage!")
+        print("You do nothing as the bear beetle slashes you with both its claws making you take terrible damage!")
         hero_health -= 4
     
     if ranum == 0 and hero_action in ["Attack","attack"]:
@@ -572,7 +572,7 @@ while bear > 0:
         break
 
 if hero_health < 1:
-    print("You have taken to much damage from the beetle bear")
+    print("You have taken to much damage from the bear beetle")
     input("As you slowly lose your life you can almost hear a voice...almost")
     quit()
 
@@ -862,7 +862,7 @@ if "Health_Potion" in items:
 
         print("The next thing you feel is a sense of falling...")
         print("After that you feel burning lava all around your body...")
-        print("Multiple voices try to reach out to you but all you hear is nothing...")
+        print("Multiple voices try to reach out to you but you hear nothing...")
         input("You take solace knowing the finale choice you made was your own..." + "\n")
 
         input("GOOD/BAD ENDING... THANKS FOR PLAYING!!!")
@@ -870,7 +870,7 @@ if "Health_Potion" in items:
     else:
         print("..." + "\n")
 
-print("With all your strength you stab the dragon right throught the chest")
+print("With all your strength you stab the dragon right throught her chest")
 print("You see her try and say somthing with her last breath but hear nothing")
 input("You step back looking at the lifeless corpse of the dragon knowing this is the end on your journey..." + "\n")
 
